@@ -1,0 +1,13 @@
+[core]
+  editor = nvim
+  ignorecase = false
+# BEGIN desktop
+#[user]
+#  email = daniel@daniel-pieper.com
+#	name = Daniel Pieper
+# END desktop
+# BEGIN work
+#[user]
+#  email = daniel.pieper@oneclick-cloud.com
+#	name = Daniel Pieper
+# END work
