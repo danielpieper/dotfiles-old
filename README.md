@@ -27,6 +27,11 @@ Configuration for language and locales
 ## `/mc`
 Configuration for [Midnight Commander](https://midnight-commander.org/)
 
+## `nvim`
+Configuration for [nvim](https://neovim.io/)
+Used configuration from [hiyali/nvim](https://github.com/hiyali/nvim/) [Cheatsheet](https://github.com/hiyali/nvim/wiki/cheatsheet---advanced)
+[General Vim Cheatsheet](https://vim.rtorr.com/)
+
 ## `rofi`
 Configuration for [rofi](https://github.com/DaveDavenport/rofi)
 
@@ -37,7 +42,7 @@ Configuration for [termite](https://github.com/thestinger/termite)
 My .xinitrc
 
 ## `/xmodmap`
-X Keybindings 
+X Keybindings
 
 ## `/xresources`
 X Resources file
