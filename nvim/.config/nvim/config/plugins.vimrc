@@ -88,7 +88,8 @@ let g:colorizer_nomap = 1
 " silent! helptags ALL
 
 " vim-devicons
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=DroidSansMono\ Nerd\ Font\ Mono:h11
 let g:airline_powerline_fonts = 1
 
 " NERDTree
