@@ -102,7 +102,9 @@ rofi.hide-scrollbar:                 true
 ! "Fake transparency" Set from: Default
 ! rofi.fake-transparency:              false
 ! "DPI" Set from: Default
-! rofi.dpi:                            192
+! BEGIN desktop
+!rofi.dpi:                            192
+! END desktop
 ! "Threads to use for string matching" Set from: Default
 ! rofi.threads:                        0
 ! "Scrollbar width" Set from: Default
