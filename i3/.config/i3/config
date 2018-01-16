@@ -225,7 +225,7 @@ bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gk
 bindsym $mod+Pause exec i3lock-fancy -- scrot -z
 
 exec --no-startup-id compton -f
-exec --no-startup-id feh --bg-scale '$HOME/.config/i3/wallpaper/desktop.jpg'
+exec --no-startup-id feh --randomize --bg-scale ~/.config/i3/wallpaper/*.jpg
 
 # Application specific settings
 for_window [class="Timeshift-gtk"] floating disable
