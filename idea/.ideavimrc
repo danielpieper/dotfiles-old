@@ -6,8 +6,14 @@ set history=1000
 set rnu
 set number
 
+" easy system clipboard copy/paste
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
 " use system clipboard
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 " easy window navigation
 nnoremap <c-l> <c-w>l
@@ -16,8 +22,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
-nnoremap <c-s-tab> gT
-nnoremap <c-tab> gt
+" nnoremap <c-s-tab> gT
+" nnoremap <c-tab> gt
 
 " clear the search buffer when hitting return
 nnoremap <space><cr> :nohlsearch<cr>
@@ -36,6 +42,7 @@ nnoremap <space>t :action FileStructurePopup<cr>
 nnoremap <space>T :action GotoSymbol<cr>
 nnoremap <space>a :action GotoAction<cr>
 nnoremap <space>b :action ToggleLineBreakpoint<cr>
+nnoremap <space>rff :action ReformatCode<cr>
 
 " code navigation
 nnoremap <space>] :action GotoImplementation<cr>

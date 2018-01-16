@@ -222,6 +222,7 @@ bindsym XF86AudioStop exec playerctl pause
 
 bindsym $mod+space exec rofi -show drun
 bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gksudo'
+bindsym $mod+Pause exec i3lock-fancy -- scrot -z
 
 exec --no-startup-id compton -f
 exec --no-startup-id feh --bg-scale '$HOME/.config/i3/wallpaper/desktop.jpg'
