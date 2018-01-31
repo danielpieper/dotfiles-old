@@ -8,6 +8,10 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Start zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
+export PATH=$PATH:~/.config/composer/vendor/bin
+# BEGIN work
+#export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+# END work
 
 # Docker
 alias dc="docker-compose"
