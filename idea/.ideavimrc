@@ -7,13 +7,13 @@ set rnu
 set number
 
 " easy system clipboard copy/paste
-noremap <space>y "*y
-noremap <space>Y "*Y
-noremap <space>p "*p
-noremap <space>P "*P
+" noremap <space>y "*y
+" noremap <space>Y "*Y
+" noremap <space>p "*p
+" noremap <space>P "*P
 
 " use system clipboard
-" set clipboard+=unnamed
+set clipboard+=unnamed
 
 " easy window navigation
 nnoremap <c-l> <c-w>l
