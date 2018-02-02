@@ -1,0 +1,8 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "felixfbecker/language-server": "^5.1",
+    "squizlabs/php_codesniffer": "^3.2"
+  }
+}
