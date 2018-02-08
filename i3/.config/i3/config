@@ -228,6 +228,8 @@ exec --no-startup-id compton -f
 exec --no-startup-id feh --randomize --bg-scale ~/.config/i3/wallpaper/*.jpg
 
 # Application specific settings
+# for_window [class="Peek"] floating enable
+# for_window [class="jetbrains-phpstorm"] floating enable
 for_window [class="Timeshift-gtk"] floating disable
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disable
