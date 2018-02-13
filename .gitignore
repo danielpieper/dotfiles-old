@@ -1,4 +1,5 @@
 mc/.config/mc/panels.ini
 composer/.config/composer/*
 !composer/.config/composer/composer.json
+kitty/.config/kitty/cached.json
 .DS_Store
