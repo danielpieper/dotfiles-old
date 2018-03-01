@@ -27,3 +27,6 @@ alias ll='ls -lah'
 
 alias vi="nvim"
 alias vim="nvim"
+
+alias ap="ansible-playbook"
+alias tf="terraform"
