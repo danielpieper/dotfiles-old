@@ -5,6 +5,7 @@ set showmode
 set history=1000
 set rnu
 set number
+set surround
 
 " easy system clipboard copy/paste
 " noremap <space>y "*y
