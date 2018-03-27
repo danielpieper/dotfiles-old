@@ -2,4 +2,5 @@ mc/.config/mc/panels.ini
 composer/.config/composer/*
 !composer/.config/composer/composer.json
 kitty/.config/kitty/cached.json
+fonts/.fonts/.uuid
 .DS_Store
