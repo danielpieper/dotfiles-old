@@ -1,14 +1,5 @@
 filetype plugin indent on
 
-" deoplete
-
-let g:deoplete#enable_at_startup = 1
-" let g:deoplete#disable_auto_complete = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
-
 if system('uname -s') == "Darwin\n"
   " OSX
   let g:python3_host_prog = '/usr/local/bin/python3'
@@ -47,6 +38,9 @@ endif
 hi Normal ctermbg=NONE
 hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
+
+" only start lsp when opening php files
+au filetype php LanguageClientStart
 
 " CtrlP
 let g:ctrlp_prompt_mappings={'PrtClearCache()':['<Leader><F5>']}

@@ -4,7 +4,6 @@ call plug#begin('~/.config/nvim/plugged')
 " :'<,'>sort
 
 " general
-Plug 'Shougo/deoplete.nvim' " dark powered neo-completion
 Plug 'SirVer/ultisnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
 Plug 'neomake/neomake' " asynchronously runs programs job-control functionality
 Plug 'christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
@@ -16,6 +15,7 @@ Plug 'ctrlpvim/ctrlp.vim' " quick look & open file
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'terryma/vim-multiple-cursors' " Ctrl n multi cursor
 Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
+Plug 'roxma/nvim-completion-manager' " auto-completion engine
 
 " editing
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
@@ -72,7 +72,10 @@ Plug 'wavded/vim-stylus' " for stylus
 Plug 'elzr/vim-json' " distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly, support in polyglot
 
 " php
-Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' } " automatically starts the padawan server if it’s not running yet
 Plug 'StanAngeloff/php.vim', {'for': 'php'} " Improve syntax highlighting by a constantly updated php syntax file
-
+Plug 'phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
+Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
+Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 call plug#end()

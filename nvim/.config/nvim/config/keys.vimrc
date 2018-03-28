@@ -121,8 +121,6 @@ set foldnestmax=5		  " 10 nested fold max
 set foldmethod=indent	" fold based on indent level
 "}}}
 
-" deoplete tab-complete
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 " ,<tab> for regular tab
 inoremap <Leader><Tab> <Space><Space>
 
