@@ -3,7 +3,7 @@ filetype plugin indent on
 " deoplete
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
+" let g:deoplete#disable_auto_complete = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 if !exists('g:deoplete#omni#input_patterns')
   let g:deoplete#omni#input_patterns = {}
@@ -37,9 +37,10 @@ let g:neomake_open_list = 2
 
 let b:neomake_javascript_eslint_exe = nrun#Which('eslint') " for find local eslint
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_php_phpcs_args_standard = 'PSR2'
 if exists(':Neomake')
   " Check for lint errors on open & write
-  autocmd BufRead,BufWritePost,BufEnter *.js,*.jsx,*.vue silent! Neomake standard|redraw
+  autocmd BufRead,BufWritePost,BufEnter *.php,*.js,*.jsx,*.vue silent! Neomake standard|redraw
 endif
 
 " make background transparent

@@ -6,7 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
 " general
 Plug 'Shougo/deoplete.nvim' " dark powered neo-completion
 Plug 'SirVer/ultisnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
-Plug 'benekastah/neomake' " asynchronously runs programs job-control functionality
+Plug 'neomake/neomake' " asynchronously runs programs job-control functionality
 Plug 'christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
 Plug 'ervandew/supertab' " super tab
 Plug 'haya14busa/incsearch.vim' " search example: /salam
@@ -70,5 +70,9 @@ Plug 'wavded/vim-stylus' " for stylus
 
 " json
 Plug 'elzr/vim-json' " distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly, support in polyglot
+
+" php
+Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' } " automatically starts the padawan server if it’s not running yet
+Plug 'StanAngeloff/php.vim', {'for': 'php'} " Improve syntax highlighting by a constantly updated php syntax file
 
 call plug#end()
