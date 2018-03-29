@@ -45,32 +45,23 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+h focus left
-# bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-# bindsym $mod+semicolon focus right
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
+# bindsym $mod+h focus left
 
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
+# https://github.com/budRich/i3ass/tree/master/i3viswiz
+bindsym $mod+j exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh down
+bindsym $mod+k exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh up
+bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh right
+bindsym $mod+h exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh left
+
 
 # move focused window
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 bindsym $mod+Shift+h move left
-
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Shift+Left move left
-# bindsym $mod+Shift+Down move down
-# bindsym $mod+Shift+Up move up
-# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
