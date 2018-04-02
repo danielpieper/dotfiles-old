@@ -29,7 +29,12 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x5-30+20"
+# BEGIN desktop
+    #geometry = "1200x5-30+20"
+# END desktop
+# BEGIN work
+#    geometry = "500x5-30+20"
+# END work
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -85,7 +90,12 @@
 
     ### Text ###
 
-    font = Monospace 14
+# BEGIN desktop
+    #font = Monospace 12
+# END desktop
+# BEGIN work
+#    font = Monospace 14
+# END work
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

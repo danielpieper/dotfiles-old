@@ -45,16 +45,16 @@ bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # change focus
-# bindsym $mod+j focus down
-# bindsym $mod+k focus up
-# bindsym $mod+l focus right
-# bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 
 # https://github.com/budRich/i3ass/tree/master/i3viswiz
-bindsym $mod+j exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh down
-bindsym $mod+k exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh up
-bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh right
-bindsym $mod+h exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh left
+# bindsym $mod+j exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh down
+# bindsym $mod+k exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh up
+# bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh right
+# bindsym $mod+h exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh left
 
 
 # move focused window
@@ -225,7 +225,7 @@ for_window [class="Timeshift-gtk"] floating disable
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disable
 assign [class="Chromium"] $workspace1
-assign [class="Termite"] $workspace2
+# assign [class="Termite"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Timeshift-gtk"] $workspace5
 assign [class="Virt-manager"] $workspace5

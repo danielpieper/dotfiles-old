@@ -30,3 +30,5 @@ alias vim="nvim"
 
 alias ap="ansible-playbook"
 alias tf="terraform"
+
+source <(hcloud completion zsh)
