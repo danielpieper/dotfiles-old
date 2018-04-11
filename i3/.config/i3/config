@@ -125,19 +125,21 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # BEGIN work
-#set $monL DP2
+#set $monL eDP1
 #set $monM DP1
-#set $monR eDP1
+#set $monR DP2
 #
 ##assign workspaces to specific outputs
-#workspace $workspace1 output $monL
-#workspace $workspace2 output $monR
+#workspace $workspace1 output $monR
+#workspace $workspace2 output $monL
 #workspace $workspace3 output $monM
 #workspace $workspace4 output $monM
+#workspace $workspace5 output $monM
+#workspace $workspace6 output $monM
 #workspace $workspace7 output $monR
-#workspace $workspace8 output $monR
-#workspace $workspace9 output $monR
-#workspace $workspace0 output $monR
+#workspace $workspace8 output $monL
+#workspace $workspace9 output $monL
+#workspace $workspace0 output $monL
 # END work
 
 # reload the configuration file
