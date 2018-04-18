@@ -101,3 +101,6 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 " For php tab space
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype blade setlocal ts=2 sw=2 sts=0 expandtab
+
+" Terraform commentary
+autocmd FileType terraform setlocal commentstring=#%s

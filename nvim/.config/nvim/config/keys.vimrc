@@ -4,6 +4,10 @@ let mapleader = ","
 " keep backward f search, remapping it to ,;
 nnoremap <Leader>; ,
 
+" When in normal mode and I hit Enter,
+" then save file please
+nmap <CR> :write<CR>
+
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
 nnoremap <Leader>n :bn<CR>
@@ -12,6 +16,10 @@ nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
 nnoremap <Leader>d :bd!<CR>
+" navigate buffer with alt + h/l
+nnoremap <A-h> :bp<CR>
+nnoremap <A-l> :bn<CR>
+
 " new buffer/tab
 nnoremap <Leader>e :enew<CR>
 
@@ -24,9 +32,15 @@ nnoremap <Leader>s :split<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>wx :close<CR>
 
+" Shortcut for copying to/from System Clipboard
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+
 " for commentary
-nnoremap " :Commentary<CR>
-vnoremap " :Commentary<CR>
+nnoremap <C-_> :Commentary<CR>
+vnoremap <C-_> :Commentary<CR>
 " :7,17Commentary
 
 " multiline moving

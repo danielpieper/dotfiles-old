@@ -133,6 +133,6 @@ autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore
 
 " clipboard " salam:x
 if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
-  set clipboard=unnamed
+  set clipboard+=unnamed
 endif
 " set clipboard=unnamedplus " salam

@@ -16,6 +16,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'terryma/vim-multiple-cursors' " Ctrl n multi cursor
 Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'roxma/nvim-completion-manager' " auto-completion engine
+Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
@@ -78,4 +79,8 @@ Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
 Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
+
+" terraform
+Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
+Plug 'juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 call plug#end()

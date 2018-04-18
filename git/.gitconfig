@@ -1,6 +1,7 @@
 [core]
   editor = nvim
   ignorecase = false
+  excludesfile = ~/.gitignore
 # BEGIN desktop
 #[user]
 #  email = daniel@daniel-pieper.com

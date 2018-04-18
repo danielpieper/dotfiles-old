@@ -35,8 +35,11 @@ Used configuration from [hiyali/nvim](https://github.com/hiyali/nvim/) [Cheatshe
 ## `rofi`
 Configuration for [rofi](https://github.com/DaveDavenport/rofi)
 
-## `/termite`
+## `/termite` (deprecated because of kitty)
 Configuration for [termite](https://github.com/thestinger/termite)
+
+## `/kitty`
+Configuration for [kitty](https://github.com/kovidgoyal/kitty)
 
 ## `/xinit`
 My .xinitrc
