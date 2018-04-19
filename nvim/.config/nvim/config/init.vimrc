@@ -83,4 +83,7 @@ Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer ru
 " terraform
 Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
 " Plug 'juliosueiras/vim-terraform-completion' " Terraform file autocomplete
+
+" Ansible
+Plug 'pearofducks/ansible-vim'
 call plug#end()
