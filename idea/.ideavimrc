@@ -30,12 +30,6 @@ set clipboard+=unnamed
 " Yank to the end of line
 nnoremap Y y$
 
-" disable arrow keys in insert mode
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-
 " easy window navigation
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
