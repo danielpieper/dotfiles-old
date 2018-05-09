@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'terryma/vim-multiple-cursors' " Ctrl n multi cursor
 Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'roxma/nvim-completion-manager' " auto-completion engine
-Plug 'ludovicchabant/vim-gutentags' " take care of ctags
+" Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
