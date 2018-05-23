@@ -3,4 +3,5 @@ composer/.config/composer/*
 !composer/.config/composer/composer.json
 kitty/.config/kitty/cached.json
 fonts/.fonts/.uuid
+nvim/.config/nvim/autoload/plug.vim.old
 .DS_Store

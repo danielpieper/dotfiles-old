@@ -40,9 +40,9 @@ hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
 " only start lsp when opening php files
-" au filetype php LanguageClientStart
+au filetype php LanguageClientStart
 " Automatically start language servers.
-let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_autoStart = 1
 
 
 " CtrlP
