@@ -36,6 +36,7 @@ Plug 'lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
 Plug 'myusuf3/numbers.vim' " intelligently toggling line numbers
 Plug 'vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes' " airline theme...
+Plug 'edkolev/tmuxline.vim' " tmux airline theming
 
 " colorschemes
 Plug 'joshdick/onedark.vim' " Atom OneDark
