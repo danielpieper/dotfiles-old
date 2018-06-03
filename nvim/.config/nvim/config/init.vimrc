@@ -79,12 +79,13 @@ Plug 'phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introsp
 Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
 Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 " terraform
-Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
+" Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
 " Plug 'juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 
 " Ansible
-Plug 'pearofducks/ansible-vim'
+" Plug 'pearofducks/ansible-vim'
 call plug#end()
