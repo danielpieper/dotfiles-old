@@ -61,10 +61,8 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" CtrlP keys
-nnoremap <Leader>pp :CtrlP<CR>
-nnoremap <Leader>pm :CtrlPMRUFiles<CR>
-nnoremap <Leader>pb :CtrlPBuffer<CR>
+" neovim-fuzzy
+nnoremap <C-p> :FuzzyOpen<CR>
 
 " Function keys
 nnoremap <silent> <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

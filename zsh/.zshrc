@@ -10,7 +10,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 export PATH=$PATH:~/.config/composer/vendor/bin
 # BEGIN work
-#export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+#export PATH="/usr/local/opt/node@8/bin:$PATH"
 # END work
 
 # Docker
