@@ -148,3 +148,9 @@ vnoremap / y/<C-R>"<CR>
 " Apply php-cs-fixer:
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
 map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
+
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
