@@ -53,8 +53,8 @@ nnoremap cow :action EditorToggleUseSoftWraps<cr>
 nnoremap col :action EditorToggleShowWhitespaces<cr>
 
 " Hide open panels
-nmap <leader>f :action HideAllWindows<cr>:action ActivateProjectToolWindow<cr>
-nmap <leader><leader>f :action HideAllWindows<cr>
+nmap <leader>w :action HideAllWindows<cr>:action ActivateProjectToolWindow<cr>
+nmap <leader><leader>w :action HideAllWindows<cr>
 
 " XDebug Shortcuts
 nmap <leader>xl :action PhpListenDebugAction<cr>
@@ -111,7 +111,7 @@ nnoremap / :action Find<cr>
 " nnoremap <leader>/ /
 
 " AceJump Plugin - Jump to Character
-nmap <leader><leader>w :action AceJumpAction<cr>
+nmap <leader>f :action AceAction<cr>
 
 " Laravel Mappings
 " nmap <Leader>lr :e app/Http/routes.php<cr>
