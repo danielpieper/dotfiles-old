@@ -5,6 +5,6 @@
     "squizlabs/php_codesniffer": "^3.2",
     "bamarni/composer-bin-plugin": "^1.2",
     "phpmd/phpmd": "^2.6",
-    "felixfbecker/language-server": "^5.4"
+    "phpstan/phpstan": "^0.9.2"
   }
 }

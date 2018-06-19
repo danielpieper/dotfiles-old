@@ -8,7 +8,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Start zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
-export PATH=$PATH:~/.config/composer/vendor/bin
+export PATH=$PATH:~/.composer/vendor/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
 # END work
