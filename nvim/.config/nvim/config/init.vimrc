@@ -78,7 +78,10 @@ Plug 'StanAngeloff/php.vim', {'for': 'php'} " Improve syntax highlighting by a c
 Plug 'phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
 Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
 Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 

@@ -78,7 +78,9 @@ endif
 let g:colorizer_startup = 0
 let g:colorizer_nomap = 1
 
-" " ale (eslint)
+" ale (eslint)
+let g:ale_completion_enabled = 0
+let g:ale_php_phpcs_standard = 'PSR-2'
 " set nocompatible
 " filetype off
 " let &runtimepath.=',~/.config/nvim/plugged/ale'
