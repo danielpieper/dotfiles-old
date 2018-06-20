@@ -18,3 +18,5 @@
 #  email = daniel.pieper@personio.de
 #	name = Daniel Pieper
 # END work
+[push]
+	default = simple

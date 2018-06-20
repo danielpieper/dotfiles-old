@@ -114,8 +114,8 @@ nnoremap / :action Find<cr>
 nmap <leader>f :action AceAction<cr>
 
 " Laravel Mappings
-" nmap <Leader>lr :e app/Http/routes.php<cr>
-" nmap <Leader>lca :e config/app.php<cr>
-" nmap <Leader>lcd :e config/database.php<cr>
-" nmap <Leader>lc :e composer.json<cr>
-" nmap <Leader>le :e .env<cr>
+nmap <Leader>lr :e app/Http/routes.php<cr>
+nmap <Leader>lca :e config/app.php<cr>
+nmap <Leader>lcd :e config/database.php<cr>
+nmap <Leader>lc :e composer.json<cr>
+nmap <Leader>le :e .env<cr>
