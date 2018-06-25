@@ -41,6 +41,10 @@ shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
 shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
 shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
 shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+shift + alt - 7 : chunkc tiling::window --send-to-desktop 7
+shift + alt - 8 : chunkc tiling::window --send-to-desktop 8
+shift + alt - 9 : chunkc tiling::window --send-to-desktop 9
+shift + alt - 0 : chunkc tiling::window --send-to-desktop 0
 
 # fast focus desktop
 # cmd + alt - x : chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
@@ -52,3 +56,7 @@ alt - 3 : chunkc tiling::desktop --focus 3
 alt - 4 : chunkc tiling::desktop --focus 4
 alt - 5 : chunkc tiling::desktop --focus 5
 alt - 6 : chunkc tiling::desktop --focus 6
+alt - 7 : chunkc tiling::desktop --focus 7
+alt - 8 : chunkc tiling::desktop --focus 8
+alt - 9 : chunkc tiling::desktop --focus 9
+alt - 0 : chunkc tiling::desktop --focus 0
