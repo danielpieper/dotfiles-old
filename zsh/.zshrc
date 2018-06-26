@@ -11,6 +11,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export PATH=$PATH:~/.composer/vendor/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
+#alias pc="~/projects/perctl"
 # END work
 
 # Docker
@@ -32,4 +33,7 @@ alias mux="tmuxinator"
 alias ap="ansible-playbook"
 alias tf="terraform"
 
-source <(hcloud completion zsh)
+if [[ -x "hcloud" ]]
+then
+  source <(hcloud completion zsh)
+fi
