@@ -3,15 +3,20 @@
 # show available pacman updates
 
 PACMAN=$(checkupdates | wc -l)
+AURMAN=$(checkupdates-aur | wc -l)
 
+if [ "$AURMAN" -gt 0 ]; then
+  echo " <span foreground='#bf7c5f'> </span>$AURMAN "
+  #     
+fi
 if [ "$PACMAN" -gt 0 ]; then
-    echo " <span foreground='#81a2be'> </span>$PACMAN "
-    #     
+  echo " <span foreground='#81a2be'> </span>$PACMAN "
+  #     
 else
-    exit 0
+  exit 0
 fi
 
 case $BLOCK_BUTTON in
-    # left click, check arch linux homepage
-    1) $BROWSER https://www.archlinux.org ;;
+  # left click, check arch linux homepage
+  1) $BROWSER https://www.archlinux.org ;;
 esac

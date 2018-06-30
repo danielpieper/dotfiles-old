@@ -37,3 +37,4 @@ if [[ -x "hcloud" ]]
 then
   source <(hcloud completion zsh)
 fi
+source /usr/share/nvm/init-nvm.sh
