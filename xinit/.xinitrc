@@ -14,4 +14,6 @@ export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndF
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # END desktop
 
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+
 exec i3

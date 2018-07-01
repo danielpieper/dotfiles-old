@@ -37,4 +37,8 @@ if [[ -x "hcloud" ]]
 then
   source <(hcloud completion zsh)
 fi
+if [[ -x "kubectl" ]]
+then
+  source <(kubectl completion zsh)
+fi
 source /usr/share/nvm/init-nvm.sh
