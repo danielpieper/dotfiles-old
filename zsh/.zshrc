@@ -13,6 +13,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
 #alias pc="~/projects/perctl"
 # END work
+# BEGIN laptop
+# source /usr/share/nvm/init-nvm.sh
+# END laptop
 
 # Docker
 alias dc="docker-compose"
@@ -41,4 +44,3 @@ if [[ -x "kubectl" ]]
 then
   source <(kubectl completion zsh)
 fi
-source /usr/share/nvm/init-nvm.sh
