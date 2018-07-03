@@ -7,6 +7,7 @@ xset fp rehash
 
 export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dawt.useSystemAAFontSettings=gasp'
 
+systemctl --user import-environment DISPLAY
 
 # BEGIN desktop
 #export GDK_SCALE=1.7
