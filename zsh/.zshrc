@@ -14,7 +14,10 @@ export PATH=$PATH:~/.composer/vendor/bin
 #alias pc="~/projects/perctl"
 # END work
 # BEGIN laptop
- #source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
+#function homestead() {
+#    ( cd ~/Homestead && vagrant $* )
+#}
 # END laptop
 
 # Docker
