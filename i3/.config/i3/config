@@ -201,24 +201,38 @@ bar {
         }
 }
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioStop exec playerctl pause
-
 bindsym $mod+space exec rofi -show drun
 bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gksudo'
-bindsym $mod+Pause exec i3lock-fancy -- scrot -z
+
+# BEGIN desktop
+## bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+## bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+## bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#
+## bindsym XF86AudioPlay exec playerctl play
+## bindsym XF86AudioPause exec playerctl pause
+## bindsym XF86AudioNext exec playerctl next
+## bindsym XF86AudioPrev exec playerctl previous
+## bindsym XF86AudioStop exec playerctl pause
+#
+## bindsym $mod+Pause exec i3lock-fancy -- scrot -z
+# END desktop
+
+# BEGIN laptop
+bindsym XF86Search exec playerctl play
+bindsym XF86Tools exec playerctl pause
+bindsym XF86Explorer exec playerctl next
+bindsym XF86LaunchA exec playerctl previous
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+bindsym $mod+Delete exec i3lock-fancy -- scrot -z
+# END home
 
 exec --no-startup-id compton -f
 exec --no-startup-id feh --randomize --bg-scale ~/.config/i3/wallpaper/*.jpg
+exec --no-startup-id nm-applet
 
 # Application specific settings
 # for_window [class="Peek"] floating enable
@@ -229,19 +243,11 @@ for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disabl
 assign [class="Chromium"] $workspace1
 # assign [class="Termite"] $workspace2
 # assign [class="kitty"] $workspace2
-assign [class="Atom"] $workspace3
 assign [class="Timeshift-gtk"] $workspace5
 assign [class="Virt-manager"] $workspace5
 assign [class="JDownloader"] $workspace6
 assign [class="Tor Browser"] $workspace6
 assign [class="net-filebot-Main"] $workspace6
 assign [class="DBeaver"] $workspace7
-# assign [class="Mysql-workbench-bin"] $workspace7
-assign [class="Evolution"] $workspace8
-assign [class="HipChat"] $workspace9
+assign [class="Mysql-workbench-bin"] $workspace7
 assign [class="Spotify"] $workspace10
-
-# Startup applications
-# exec --no-startup-id TERMINAL=kitty i3-sensible-terminal
-# exec --no-startup-id TERMINAL=kitty i3-sensible-terminal
-# exec --no-startup-id chromium

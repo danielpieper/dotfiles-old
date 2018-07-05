@@ -13,6 +13,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
 #alias pc="~/projects/perctl"
 # END work
+# BEGIN laptop
+ #source /usr/share/nvm/init-nvm.sh
+# END laptop
 
 # Docker
 alias dc="docker-compose"
@@ -36,4 +39,8 @@ alias tf="terraform"
 if [[ -x "hcloud" ]]
 then
   source <(hcloud completion zsh)
+fi
+if [[ -x "kubectl" ]]
+then
+  source <(kubectl completion zsh)
 fi

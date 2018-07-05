@@ -32,6 +32,9 @@
 # BEGIN desktop
     #geometry = "1200x5-30+20"
 # END desktop
+# BEGIN laptop
+    #geometry = "500x5-5+10"
+# END laptop
 # BEGIN work
 #    geometry = "500x5-30+20"
 # END work
@@ -93,6 +96,9 @@
 # BEGIN desktop
     #font = Monospace 12
 # END desktop
+# BEGIN laptop
+    #font = Monospace 12
+# END laptop
 # BEGIN work
 #    font = Monospace 14
 # END work
