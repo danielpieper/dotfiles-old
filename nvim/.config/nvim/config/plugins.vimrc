@@ -44,15 +44,17 @@ au filetype php LanguageClientStart
 " Automatically start language servers.
 " let g:LanguageClient_autoStart = 1
 
+" ncm2
+" enable ncm2 for all buffer
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
-" CtrlP
-let g:ctrlp_prompt_mappings={'PrtClearCache()':['<Leader><F5>']}
-let g:ctrlp_prompt_mappings={'PrtdeleteEnt()':['<Leader><F7>']}
-let g:ctrlp_match_window='bottom,order:btt,min:2,max:15'
-set wildmenu " enhanced autocomplete
-set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*.so,*.swp,*.zip,*node_modules*,*.jpg,*.png,*.svg,*.ttf,*.woff,*.woff3,*.eot
-",*public/css/*,*public/js*
-" let g:ctrlp_user_command = 'find %s -type f'
+" note that must keep noinsert in completeopt, the others is optional
+set completeopt=noinsert,menuone,noselect
+
+" supress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
+set shortmess+=c
+
+
 
 " delimitMate options
 let delimitMate_expand_cr=1

@@ -15,7 +15,8 @@ Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for ne
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'terryma/vim-multiple-cursors' " Ctrl n multi cursor
 Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
-Plug 'roxma/nvim-completion-manager' " auto-completion engine
+Plug 'https://github.com/ncm2/ncm2' " auto-completion engine
+Plug 'https://github.com/roxma/nvim-yarp' " dependency for ncm2
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
