@@ -63,6 +63,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " neovim-fuzzy
 nnoremap <C-p> :FuzzyOpen<CR>
+nnoremap <C-f> :FuzzyGrep<CR>
 
 " Function keys
 nnoremap <silent> <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -147,10 +148,12 @@ vnoremap / y/<C-R>"<CR>
 
 " Apply php-cs-fixer:
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
-map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
+map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
 " nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 " nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <Leader>] :call LanguageClient#textDocument_definition()<CR>
 " nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <Leader>rr :call LanguageClient#textDocument_rename()<CR>
