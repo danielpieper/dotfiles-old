@@ -35,8 +35,13 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
+
+" buffer keys
+nnoremap <leader>n :action NextEditorTab<cr>
+nnoremap <leader>q :action PreviousEditorTab<cr>
 nnoremap <a-h> gT
 nnoremap <a-l> gt
+
 
 " Splitting Windows
 nmap <leader>\ :vsplit<CR>
