@@ -56,15 +56,14 @@ Plug 'kana/vim-textobj-fold' " provides text objects for fold , eg. yaz to yank 
 Plug 'kana/vim-textobj-function' " Text objects for functions, build error ??!
 Plug 'kana/vim-textobj-indent' " Text objects for indented blocks of lines, eg. y- yank of blocks of lines
 Plug 'kana/vim-textobj-user' " create your own text objects without pain, eg. call textobj#user#plugin('datetime', { ...
-Plug 'wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
+Plug 'https://github.com/wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
 
 " html
 Plug 'https://github.com/mattn/emmet-vim' " provides support for expanding abbreviations similar to emmet
 
 " css
-Plug 'hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defined in some foreign specifications) support for Vim’s built-in
-Plug 'othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
-Plug 'wavded/vim-stylus' " for stylus
+Plug 'https://github.com/hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defined in some foreign specifications) support for Vim’s built-in
+Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 
 " php
 " Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
@@ -77,9 +76,6 @@ Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin 
 Plug 'https://github.com/roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 " terraform
-" Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
-" Plug 'juliosueiras/vim-terraform-completion' " Terraform file autocomplete
+Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 
-" Ansible
-" Plug 'pearofducks/ansible-vim'
 call plug#end()
