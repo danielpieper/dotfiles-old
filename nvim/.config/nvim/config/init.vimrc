@@ -14,6 +14,10 @@ Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs 
 Plug 'https://github.com/ervandew/supertab' " super tab
 Plug 'https://github.com/ncm2/ncm2' " auto-completion engine
 Plug 'https://github.com/roxma/nvim-yarp' " dependency for ncm2
+Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffer
+Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
+Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
+Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
@@ -30,11 +34,11 @@ Plug 'tpope/vim-unimpaired' " [a cursor to previous a, ]x cursor to next x
 Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWord
 
 " eye candy
-Plug 'lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
-Plug 'myusuf3/numbers.vim' " intelligently toggling line numbers
-Plug 'vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air
-Plug 'vim-airline/vim-airline-themes' " airline theme...
-Plug 'edkolev/tmuxline.vim' " tmux airline theming
+Plug 'https://github.com/lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
+Plug 'https://github.com/myusuf3/numbers.vim' " intelligently toggling line numbers
+Plug 'https://github.com/vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air
+Plug 'https://github.com/vim-airline/vim-airline-themes' " airline theme...
+Plug 'https://github.com/edkolev/tmuxline.vim' " tmux airline theming
 
 " colorschemes
 Plug 'https://github.com/joshdick/onedark.vim' " Atom OneDark
@@ -63,15 +67,14 @@ Plug 'othree/csscomplete.vim' " Update the bult-in CSS complete function to late
 Plug 'wavded/vim-stylus' " for stylus
 
 " php
-Plug 'phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
-Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
-Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
-Plug 'autozimu/LanguageClient-neovim', {
+" Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
+Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
+Plug 'https://github.com/autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
+Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
+Plug 'https://github.com/roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 " terraform
 " Plug 'hashivim/vim-terraform' " Syntax highlighter for terraform files
