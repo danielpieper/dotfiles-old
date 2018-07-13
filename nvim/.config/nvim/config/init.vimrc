@@ -4,24 +4,21 @@ call plug#begin('~/.config/nvim/plugged')
 " :'<,'>sort
 
 " general
-Plug 'SirVer/ultisnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
-Plug 'neomake/neomake' " asynchronously runs programs job-control functionality
-Plug 'christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
-Plug 'ervandew/supertab' " super tab
-Plug 'haya14busa/incsearch.vim' " search example: /salam
-Plug 'honza/vim-snippets' " vim snippets
-Plug 'jaawerth/neomake-local-eslint-first' " for eslint local
+Plug 'https://github.com/sirver/UltiSnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
+Plug 'https://github.com/christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
+Plug 'https://github.com/haya14busa/incsearch.vim' " incrementally highlights ALL pattern matches unlike default 'incsearch'.
+Plug 'https://github.com/honza/vim-snippets' " snippets for various programming languages
 Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for neovim, via fzy[1].
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
-Plug 'terryma/vim-multiple-cursors' " Ctrl n multi cursor
-Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
+Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
+Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs for Vim.
+Plug 'https://github.com/ervandew/supertab' " super tab
 Plug 'https://github.com/ncm2/ncm2' " auto-completion engine
 Plug 'https://github.com/roxma/nvim-yarp' " dependency for ncm2
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
-Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
-Plug 'airblade/vim-gitgutter' " shows a git diff in the 'gutter'
+Plug 'https://github.com/Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'https://github.com/airblade/vim-gitgutter' " shows a git diff in the 'gutter'
 Plug 'junegunn/vim-easy-align' " indent multi text ( easy align : so many feature )
 Plug 'mbbill/undotree' " undo tree
 Plug 'nathanaelkane/vim-indent-guides' " `,ig` to toggle
@@ -40,19 +37,14 @@ Plug 'vim-airline/vim-airline-themes' " airline theme...
 Plug 'edkolev/tmuxline.vim' " tmux airline theming
 
 " colorschemes
-Plug 'joshdick/onedark.vim' " Atom OneDark
-Plug 'ryanoasis/vim-devicons' " look at beauty icons
+Plug 'https://github.com/joshdick/onedark.vim' " Atom OneDark
+Plug 'https://github.com/ryanoasis/vim-devicons' " look at beauty icons
 
 " javascript
 Plug 'isRuslan/vim-es6' " Write JavaScript ES6 easily with vim. (You need SnipMate or UltiSnips installed. ??)
-Plug 'leafgarland/typescript-vim' " just for typescript
-Plug 'mhartington/vim-angular2-snippets' " for TS and ng2 (version 4.o.o >=)
-Plug 'moll/vim-node' " gf to jump to source and module files, :Nedit {module_name} to edit the main file of a module
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] } " JSX (React) syntax highlighting and indenting for vim
+Plug 'https://github.com/moll/vim-node' " gf to jump to source and module files, :Nedit {module_name} to edit the main file of a module
 Plug 'othree/javascript-libraries-syntax.vim' " Supports JavaScript libraries . Should work well with other (ng, react, vue, coffeScript, typeScript...)
 Plug 'othree/yajs.vim' " Another JavaScript Syntax file for Vim. Key differences
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'vue', 'vue.html.javascript.css'] } " rovides syntax highlighting and improved indentation
-Plug 'posva/vim-vue'
 
 " text objects
 Plug 'glts/vim-textobj-comment' " provides text objects for comments,  looks not works well ??
@@ -63,19 +55,14 @@ Plug 'kana/vim-textobj-user' " create your own text objects without pain, eg. ca
 Plug 'wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
 
 " html
-Plug 'mattn/emmet-vim' " provides support for expanding abbreviations similar to emmet
-Plug 'othree/html5.vim' " HTML5 + inline SVG omnicomplete function, indent and syntax for Vim. Based on the default htmlcomplete.vim, This plugin contributes to vim-polyglot language pack.
+Plug 'https://github.com/mattn/emmet-vim' " provides support for expanding abbreviations similar to emmet
 
 " css
 Plug 'hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defined in some foreign specifications) support for Vim’s built-in
 Plug 'othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 Plug 'wavded/vim-stylus' " for stylus
 
-" json
-Plug 'elzr/vim-json' " distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly, support in polyglot
-
 " php
-Plug 'StanAngeloff/php.vim', {'for': 'php'} " Improve syntax highlighting by a constantly updated php syntax file
 Plug 'phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
 Plug 'roxma/ncm-phpactor' " phpactor integration for nvim-completion-manager
 Plug 'arnaud-lb/vim-php-namespace' " insert 'use' statements automatically

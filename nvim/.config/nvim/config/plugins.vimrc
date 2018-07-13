@@ -8,32 +8,6 @@ else
   let g:python3_host_prog = '/usr/bin/python3'
 endif
 
-" neomake config
-autocmd! BufWritePost * Neomake
-" autocmd BufLeave * QFix
-
-let g:neomake_warning_sign = {
-  \ 'text': 'W',
-  \ 'texthl': 'WarningMsg',
-  \ }
-
-let g:neomake_error_sign = {
-  \ 'text': 'E',
-  \ 'texthl': 'ErrorMsg',
-  \ }
-
-" let g:neomake_list_height = 2
-let g:neomake_open_list = 2
-" let g:neomake_verbose = 3
-
-let b:neomake_javascript_eslint_exe = nrun#Which('eslint') " for find local eslint
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_php_phpcs_args_standard = 'PSR2'
-if exists(':Neomake')
-  " Check for lint errors on open & write
-  autocmd BufRead,BufWritePost,BufEnter *.php,*.js,*.jsx,*.vue silent! Neomake standard|redraw
-endif
-
 " make background transparent
 hi Normal ctermbg=NONE
 hi EndOfBuffer ctermbg=NONE
