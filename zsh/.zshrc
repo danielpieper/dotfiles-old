@@ -8,7 +8,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Start zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
-export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
 #alias pc="~/projects/perctl"
