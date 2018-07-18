@@ -250,4 +250,5 @@ assign [class="Tor Browser"] $workspace6
 assign [class="net-filebot-Main"] $workspace6
 assign [class="DBeaver"] $workspace7
 assign [class="Mysql-workbench-bin"] $workspace7
+assign [class="Slack"] $workspace9
 assign [class="Spotify"] $workspace10
