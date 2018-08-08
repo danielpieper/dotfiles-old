@@ -12,6 +12,7 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
 #alias pc="~/projects/perctl"
+#alias wl="nvim ~/worklog.txt"
 # END work
 # BEGIN laptop
 #source /usr/share/nvm/init-nvm.sh
