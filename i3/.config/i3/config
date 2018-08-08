@@ -232,7 +232,7 @@ bindsym $mod+Delete exec i3lock-fancy -- scrot -z
 
 exec --no-startup-id compton -f
 exec --no-startup-id feh --randomize --bg-scale ~/.config/i3/wallpaper/*.jpg
-exec --no-startup-id nm-applet
+exec dex -ae i3
 
 # Application specific settings
 # for_window [class="Peek"] floating enable
