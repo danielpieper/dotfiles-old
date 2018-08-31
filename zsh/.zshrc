@@ -12,7 +12,8 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
 #alias pc="~/projects/perctl"
-#alias wl="nvim ~/worklog.txt"
+#alias wl="nvim ~/Documents/worklog.txt"
+#
 # END work
 # BEGIN laptop
 #source /usr/share/nvm/init-nvm.sh
@@ -39,6 +40,10 @@ alias mux="tmuxinator"
 
 alias ap="ansible-playbook"
 alias tf="terraform"
+if [[ -x "bat" ]]
+then
+  cat="bat"
+fi
 
 if [[ -x "hcloud" ]]
 then
@@ -48,3 +53,9 @@ if [[ -x "kubectl" ]]
 then
   source <(kubectl completion zsh)
 fi
+# BEGIN work
+#if [[ -x "minikube" ]]
+#then
+#  eval $(minikube docker-env)
+#fi
+# END work
