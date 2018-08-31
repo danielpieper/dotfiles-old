@@ -18,6 +18,7 @@ Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffe
 Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
 Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
+Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
@@ -66,14 +67,14 @@ Plug 'https://github.com/hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defin
 Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 
 " php
-" Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install'} " refactoring and introspection tools
+Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'} " refactoring, introspection tools and auto-completion source
 Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
-Plug 'https://github.com/autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
-Plug 'https://github.com/roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
+" Plug 'https://github.com/autozimu/LanguageClient-neovim', {
+    " \ 'branch': 'next',
+    " \ 'do': 'bash install.sh',
+    " \ }
+" Plug 'https://github.com/roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs', 'for': 'php'}
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete

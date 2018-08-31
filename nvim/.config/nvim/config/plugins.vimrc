@@ -14,7 +14,7 @@ hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
 " only start lsp when opening php files
-au filetype php LanguageClientStart
+" au filetype php LanguageClientStart
 " Automatically start language servers.
 " let g:LanguageClient_autoStart = 1
 
@@ -86,3 +86,7 @@ autocmd Filetype blade setlocal ts=2 sw=2 sts=0 expandtab
 
 " Terraform commentary
 autocmd FileType terraform setlocal commentstring=#%s
+
+" Supertab completion tab direction
+let g:SuperTabDefaultCompletionType = "<c-n>"
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
