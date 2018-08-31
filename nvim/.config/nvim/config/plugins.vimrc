@@ -13,10 +13,16 @@ hi Normal ctermbg=NONE
 hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
-" only start lsp when opening php files
-" au filetype php LanguageClientStart
-" Automatically start language servers.
-" let g:LanguageClient_autoStart = 1
+" vim-lsp
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
+let g:lsp_signs_enabled = 1         " enable signs
+let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+au User lsp_setup call lsp#register_server({
+     \ 'name': 'php-language-server',
+     \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
+     \ 'whitelist': ['php'],
+     \ })
 
 " ncm2
 " enable ncm2 for all buffer
