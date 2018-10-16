@@ -63,7 +63,7 @@ nmap <leader><leader>w :action HideAllWindows<cr>
 
 " XDebug Shortcuts
 nmap <leader>xl :action PhpListenDebugAction<cr>
-nmap <leader>bp :action ToggleLineBreakpoint<cr>
+nmap <leader>bb :action ToggleLineBreakpoint<cr>
 
 " actions
 nnoremap <leader>q :action CloseContent<cr>
