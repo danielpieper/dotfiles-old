@@ -89,14 +89,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# https://glyphsearch.com/?library=font-awesome&copy=unicode
 set $workspace1 "1  Browser"
 set $workspace2 "2  Console"
 set $workspace3 "3  Editor"
 set $workspace4 "4  Editor"
-set $workspace5 "5  Misc"
+set $workspace5 "5  Docs "
 set $workspace6 "6  Misc"
 set $workspace7 "7  Database"
-set $workspace8 "8  Mail"
+set $workspace8 "8  Misc"
 set $workspace9 "9  Chat"
 set $workspace10 "10  Music"
 
@@ -131,10 +132,10 @@ workspace $workspace1 output $monL
 workspace $workspace2 output $monL
 workspace $workspace3 output $monM
 workspace $workspace4 output $monM
-workspace $workspace5 output $monM
+workspace $workspace5 output $monL
 workspace $workspace6 output $monM
 workspace $workspace7 output $monM
-workspace $workspace8 output $monL
+workspace $workspace9 output $monM
 workspace $workspace9 output $monL
 workspace $workspace0 output $monL
 
@@ -231,20 +232,11 @@ exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
 exec dex -ae i3
 
 # Application specific settings
-# for_window [class="Peek"] floating enable
-# for_window [class="jetbrains-phpstorm"] floating enable
-for_window [class="Timeshift-gtk"] floating disable
-for_window [class="Spotify"] move to workspace $workspace10
-for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disable
 assign [class="Chromium"] $workspace1
-# assign [class="Termite"] $workspace2
-# assign [class="kitty"] $workspace2
-assign [class="Timeshift-gtk"] $workspace5
-assign [class="Virt-manager"] $workspace5
-assign [class="JDownloader"] $workspace6
+assign [class="Zeal"] $workspace5
 assign [class="Tor Browser"] $workspace6
-assign [class="net-filebot-Main"] $workspace6
 assign [class="DBeaver"] $workspace7
 assign [class="Mysql-workbench-bin"] $workspace7
 assign [class="Slack"] $workspace9
 assign [class="Spotify"] $workspace10
+for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disable
