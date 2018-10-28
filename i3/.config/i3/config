@@ -38,6 +38,11 @@ font pango:System San Francisco Display 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+focus_follows_mouse no
+
+# For instance: Assume you are on workspace "1: www" and switch to "2: IM" using mod+2 because somebody sent you a message. You don’t need to remember where you came from now, you can just press $mod+2 again to switch back to "1: www".
+# workspace_auto_back_and_forth yes
+
 # start a terminal
 bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 
@@ -128,7 +133,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 #assign workspaces to specific outputs
 set $monL eDP1
 set $monM DP1
-workspace $workspace1 output $monL
+workspace $workspace1 output $monM
 workspace $workspace2 output $monL
 workspace $workspace3 output $monM
 workspace $workspace4 output $monM
@@ -216,16 +221,16 @@ bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gk
 # END desktop
 
 # BEGIN laptop
-bindsym XF86Search exec playerctl play
-bindsym XF86Tools exec playerctl pause
-bindsym XF86Explorer exec playerctl next
-bindsym XF86LaunchA exec playerctl previous
-
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-
-bindsym $mod+Delete exec i3lock-fancy -- scrot -z
-# END home
+#bindsym XF86Search exec playerctl play
+#bindsym XF86Tools exec playerctl pause
+#bindsym XF86Explorer exec playerctl next
+#bindsym XF86LaunchA exec playerctl previous
+#
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+#
+#bindsym $mod+Delete exec i3lock-fancy -- scrot -z
+# END laptop
 
 exec --no-startup-id compton -f
 exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
@@ -239,4 +244,5 @@ assign [class="DBeaver"] $workspace7
 assign [class="Mysql-workbench-bin"] $workspace7
 assign [class="Slack"] $workspace9
 assign [class="Spotify"] $workspace10
+for_window [class="Spotify"] move to workspace $workspace10
 for_window [title="^Merge Revisions" class="jetbrains-phpstorm"] floating disable
