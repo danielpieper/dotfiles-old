@@ -38,6 +38,8 @@ alias vi="nvim"
 alias vim="nvim"
 alias mux="tmuxinator"
 
+alias xmm="xmodmap ~/.Xmodmap"
+
 alias ap="ansible-playbook"
 alias tf="terraform"
 if [[ -x "bat" ]]

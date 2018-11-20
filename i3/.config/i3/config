@@ -38,7 +38,8 @@ font pango:System San Francisco Display 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-focus_follows_mouse no
+# focus_follows_mouse no
+# mouse_warping none
 
 # For instance: Assume you are on workspace "1: www" and switch to "2: IM" using mod+2 because somebody sent you a message. You don’t need to remember where you came from now, you can just press $mod+2 again to switch back to "1: www".
 # workspace_auto_back_and_forth yes
@@ -131,18 +132,18 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 #assign workspaces to specific outputs
-set $monL eDP1
-set $monM DP1
-workspace $workspace1 output $monM
-workspace $workspace2 output $monL
-workspace $workspace3 output $monM
-workspace $workspace4 output $monM
-workspace $workspace5 output $monL
-workspace $workspace6 output $monM
-workspace $workspace7 output $monM
-workspace $workspace9 output $monM
-workspace $workspace9 output $monL
-workspace $workspace0 output $monL
+set $internalDisplay eDP1
+set $externalDisplay DP1
+workspace $workspace1 output $internalDisplay
+workspace $workspace2 output $internalDisplay
+workspace $workspace3 output $externalDisplay
+workspace $workspace4 output $externalDisplay
+workspace $workspace5 output $internalDisplay
+workspace $workspace6 output $externalDisplay
+workspace $workspace7 output $internalDisplay
+workspace $workspace8 output $internalDisplay
+workspace $workspace9 output $internalDisplay
+workspace $workspace0 output $internalDisplay
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -192,10 +193,10 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command py3status --dbus-notify -c ~/.config/i3/i3status.conf
         colors {
           background $bg-color
-          separator #757575
+          separator $bg-color
           #                  border             background         text
           focused_workspace  $bg-color          $bg-color          $text-color
           inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
