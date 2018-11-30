@@ -18,6 +18,7 @@ Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffe
 Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
 Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
+Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
 Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 " Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
