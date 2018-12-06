@@ -20,7 +20,7 @@ Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
 Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
 Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
-" Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
+Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 
 " editing
@@ -74,9 +74,9 @@ Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements 
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 
 " php lsp
-" Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
-" Plug 'https://github.com/prabirshrestha/vim-lsp' " lsp client
-" Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
+Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
+Plug 'https://github.com/prabirshrestha/vim-lsp' " lsp client
+Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update'}
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete

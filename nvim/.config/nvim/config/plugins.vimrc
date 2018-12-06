@@ -14,8 +14,8 @@ hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
 " vim-lsp
-" let g:lsp_log_verbose = 1
-" let g:lsp_log_file = expand('~/vim-lsp.log')
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 au User lsp_setup call lsp#register_server({
