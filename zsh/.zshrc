@@ -44,7 +44,7 @@ alias ap="ansible-playbook"
 alias tf="terraform"
 if [[ -x "bat" ]]
 then
-  cat="bat"
+  alias cat="bat"
 fi
 
 if [[ -x "hcloud" ]]
