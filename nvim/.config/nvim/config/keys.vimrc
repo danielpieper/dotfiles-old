@@ -10,8 +10,8 @@ nmap <CR> :write<CR>
 
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
-nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>q :bp<CR>
+nnoremap <Leader>gt :bn<CR>
+nnoremap <Leader>gT :bp<CR>
 nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
@@ -63,7 +63,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " neovim-fuzzy
 nnoremap <C-p> :FuzzyOpen<CR>
-nnoremap <C-f> :FuzzyGrep<CR>
+nnoremap <C-f> :FuzzyGrep<Space>
 
 " Function keys
 nnoremap <silent> <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -147,4 +147,3 @@ map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 " Or map each action separately
 nnoremap <Leader>] :LspDefinition<CR>
 nnoremap <Leader>[ :LspReferences<CR>
-nnoremap <Leader>rr :LspRename<CR>
