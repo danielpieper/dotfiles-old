@@ -140,7 +140,7 @@ workspace $workspace3 output $externalDisplay
 workspace $workspace4 output $externalDisplay
 workspace $workspace5 output $internalDisplay
 workspace $workspace6 output $externalDisplay
-workspace $workspace7 output $internalDisplay
+workspace $workspace7 output $externalDisplay
 workspace $workspace8 output $internalDisplay
 workspace $workspace9 output $internalDisplay
 workspace $workspace0 output $internalDisplay
