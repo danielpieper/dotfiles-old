@@ -14,8 +14,8 @@ hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
 " vim-lsp
-let g:lsp_log_verbose = 1
-let g:lsp_log_file = expand('~/vim-lsp.log')
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 au User lsp_setup call lsp#register_server({
@@ -27,6 +27,7 @@ au User lsp_setup call lsp#register_server({
 " ncm2
 " enable ncm2 for all buffer
 autocmd BufEnter * call ncm2#enable_for_buffer()
+let g:ncm2#popup_delay = 240
 
 " note that must keep noinsert in completeopt, the others is optional
 set completeopt=noinsert,menuone,noselect
@@ -96,3 +97,5 @@ autocmd FileType terraform setlocal commentstring=#%s
 " Supertab completion tab direction
 let g:SuperTabDefaultCompletionType = "<c-n>"
 " let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']

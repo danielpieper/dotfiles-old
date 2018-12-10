@@ -22,6 +22,7 @@ Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
 Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
+Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 
 " editing
 Plug 'https://github.com/Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
@@ -61,6 +62,9 @@ Plug 'kana/vim-textobj-indent' " Text objects for indented blocks of lines, eg. 
 Plug 'kana/vim-textobj-user' " create your own text objects without pain, eg. call textobj#user#plugin('datetime', { ...
 Plug 'https://github.com/wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
 
+" debugging
+" Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
+
 " html
 Plug 'https://github.com/mattn/emmet-vim' " provides support for expanding abbreviations similar to emmet
 
@@ -75,8 +79,8 @@ Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin 
 
 " php lsp
 Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
-Plug 'https://github.com/prabirshrestha/vim-lsp' " lsp client
-Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update'}
+Plug 'https://github.com/prabirshrestha/vim-lsp', {'for': 'php'} " lsp client
+Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete

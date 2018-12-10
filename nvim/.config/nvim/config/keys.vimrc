@@ -10,8 +10,8 @@ nmap <CR> :write<CR>
 
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
-nnoremap <Leader>gt :bn<CR>
-nnoremap <Leader>gT :bp<CR>
+nnoremap <Leader>h :bp<CR>
+nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
