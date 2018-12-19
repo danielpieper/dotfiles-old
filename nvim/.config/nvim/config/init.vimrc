@@ -54,6 +54,9 @@ Plug 'https://github.com/moll/vim-node' " gf to jump to source and module files,
 Plug 'othree/javascript-libraries-syntax.vim' " Supports JavaScript libraries . Should work well with other (ng, react, vue, coffeScript, typeScript...)
 Plug 'othree/yajs.vim' " Another JavaScript Syntax file for Vim. Key differences
 
+" Golang
+" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " text objects
 Plug 'glts/vim-textobj-comment' " provides text objects for comments,  looks not works well ??
 Plug 'kana/vim-textobj-fold' " provides text objects for fold , eg. yaz to yank arround fold
