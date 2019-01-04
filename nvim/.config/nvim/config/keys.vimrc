@@ -147,3 +147,7 @@ map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 " Or map each action separately
 " nnoremap <Leader>] :LspDefinition<CR>
 " nnoremap <Leader>[ :LspReferences<CR>
+
+" PHP Documentor
+let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>

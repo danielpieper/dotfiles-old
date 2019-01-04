@@ -9,6 +9,7 @@ Plug 'https://github.com/christoomey/vim-tmux-navigator' " navigate from vim to 
 Plug 'https://github.com/haya14busa/incsearch.vim' " incrementally highlights ALL pattern matches unlike default 'incsearch'.
 Plug 'https://github.com/honza/vim-snippets' " snippets for various programming languages
 Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for neovim, via fzy[1].
+Plug 'https://github.com/jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'https://github.com/ervandew/supertab' " super tab
@@ -74,6 +75,8 @@ Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install', 'for':
 Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
+Plug 'https://github.com/tobyS/vmustache' " vmustache is an implementation of the Mustache template system in VIMScript.
+Plug 'https://github.com/tobyS/pdv' " PDV - PHP Documentor for VIM - 2
 
 " php lsp
 " Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
