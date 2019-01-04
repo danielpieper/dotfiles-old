@@ -18,4 +18,5 @@ udiskie --tray --use-udisks2 &
 
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
+export DESKTOP_SESSION=i3
 exec i3

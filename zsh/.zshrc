@@ -17,9 +17,6 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # END work
 # BEGIN laptop
 #source /usr/share/nvm/init-nvm.sh
-#function homestead() {
-#    ( cd ~/Homestead && vagrant $* )
-#}
 # END laptop
 
 # Docker
@@ -27,6 +24,9 @@ alias dc="docker-compose"
 alias dm="docker-machine"
 alias de="docker exec -it"
 alias d="docker"
+
+# kitty ssh
+alias ssh="kitty +kitten ssh"
 
 # Unix
 alias ln='ln -v'

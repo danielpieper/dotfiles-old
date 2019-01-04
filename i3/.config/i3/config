@@ -238,11 +238,13 @@ bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gk
 # END laptop
 
 exec --no-startup-id compton -f
-exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
+# exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
+exec --no-startup-id himawaripy  -o 1 -l 4 -d 9
 exec dex -ae i3
 
 # Application specific settings
 assign [class="Chromium"] $workspace1
+assign [class="Firefox"] $workspace1
 assign [class="Zeal"] $workspace5
 assign [class="Tor Browser"] $workspace6
 assign [class="DBeaver"] $workspace7
