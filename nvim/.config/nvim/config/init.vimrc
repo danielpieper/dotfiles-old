@@ -18,10 +18,7 @@ Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffe
 Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
 Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
-Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
-Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
-Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
-" Plug 'ludovicchabant/vim-gutentags' " take care of ctags
+Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 
 " editing
@@ -54,9 +51,6 @@ Plug 'https://github.com/moll/vim-node' " gf to jump to source and module files,
 Plug 'othree/javascript-libraries-syntax.vim' " Supports JavaScript libraries . Should work well with other (ng, react, vue, coffeScript, typeScript...)
 Plug 'othree/yajs.vim' " Another JavaScript Syntax file for Vim. Key differences
 
-" Golang
-" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 " text objects
 Plug 'glts/vim-textobj-comment' " provides text objects for comments,  looks not works well ??
 Plug 'kana/vim-textobj-fold' " provides text objects for fold , eg. yaz to yank arround fold
@@ -77,15 +71,21 @@ Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS comple
 
 " php
 Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'} " refactoring, introspection tools and auto-completion source
+Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 
 " php lsp
-Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
-Plug 'https://github.com/prabirshrestha/vim-lsp', {'for': 'php'} " lsp client
-Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
+" Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
+" Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
+" Plug 'https://github.com/prabirshrestha/vim-lsp', {'for': 'php'} " lsp client
+" Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
+
+" golang
+" Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
+" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform
-Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
+" Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 
 call plug#end()

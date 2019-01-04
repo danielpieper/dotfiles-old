@@ -145,5 +145,5 @@ map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
-nnoremap <Leader>] :LspDefinition<CR>
-nnoremap <Leader>[ :LspReferences<CR>
+" nnoremap <Leader>] :LspDefinition<CR>
+" nnoremap <Leader>[ :LspReferences<CR>

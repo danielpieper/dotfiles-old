@@ -16,13 +16,13 @@ hi LineNr ctermbg=234
 " vim-lsp
 " let g:lsp_log_verbose = 1
 " let g:lsp_log_file = expand('~/vim-lsp.log')
-let g:lsp_signs_enabled = 1         " enable signs
-let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-au User lsp_setup call lsp#register_server({
-     \ 'name': 'php-language-server',
-     \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
-     \ 'whitelist': ['php'],
-     \ })
+" let g:lsp_signs_enabled = 1         " enable signs
+" let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+" au User lsp_setup call lsp#register_server({
+     " \ 'name': 'php-language-server',
+     " \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
+     " \ 'whitelist': ['php'],
+     " \ })
 
 " ncm2
 " enable ncm2 for all buffer
@@ -62,7 +62,7 @@ let g:colorizer_startup = 0
 let g:colorizer_nomap = 1
 
 " ale (eslint)
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 let g:ale_php_phpcs_standard = 'PSR-2'
 " set nocompatible
 " filetype off
