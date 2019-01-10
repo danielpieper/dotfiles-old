@@ -19,8 +19,9 @@ Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffe
 Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
 Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
-Plug 'ludovicchabant/vim-gutentags' " take care of ctags
+" Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
+Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
 
 " editing
 Plug 'https://github.com/Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
@@ -85,8 +86,8 @@ Plug 'https://github.com/tobyS/pdv' " PDV - PHP Documentor for VIM - 2
 " Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
 
 " golang
-" Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
-" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
+Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform
 " Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
