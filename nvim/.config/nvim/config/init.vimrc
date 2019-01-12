@@ -19,6 +19,8 @@ Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffe
 Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
 Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
 Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
+Plug 'https://github.com/ncm2/ncm2-syntax' " neco-syntax gathers syntax data from vim syntax file. This plugin will use these data as the source of ncm2 for completion.
+Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deoplete/ncm
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
