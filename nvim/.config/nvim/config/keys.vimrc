@@ -15,7 +15,7 @@ nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
-nnoremap <Leader>d :bd!<CR>
+nnoremap <Leader>d :bd<CR>
 " navigate buffer with alt + h/l
 nnoremap <A-h> :bp<CR>
 nnoremap <A-l> :bn<CR>
@@ -119,9 +119,11 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " folding
-nmap <Leader>f zf%
+" nmap <Leader>f zf%
+nmap <Leader>f zr
+nmap <Leader>F zm
 " Folding {{{
-set nofoldenable			  " disable folding
+" set nofoldenable			  " disable folding
 set foldlevelstart=2	" start folding then we are 10 blocks deep
 set foldnestmax=5		  " 10 nested fold max
 set foldmethod=indent	" fold based on indent level
@@ -151,3 +153,34 @@ map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 " PHP Documentor
 let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"
 nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+
+" PHPactor
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+
+" Invoke the context menu
+nmap <Leader>[ :call phpactor#ContextMenu()<CR>
+
+" Invoke the navigation menu
+nmap <Leader>nn :call phpactor#Navigate()<CR>
+
+" Goto definition of class or class member under the cursor
+nmap <Leader>] :call phpactor#GotoDefinition()<CR>
+
+" Show brief information about the symbol under the cursor
+nmap <Leader>K :call phpactor#Hover()<CR>
+
+" Transform the classes in the current file
+nmap <Leader>tt :call phpactor#Transform()<CR>
+
+" Generate a new class (replacing the current file)
+nmap <Leader>cc :call phpactor#ClassNew()<CR>
+
+" Extract expression (normal mode)
+nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+
+" Extract expression from selection
+vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+
+" Extract method from selection
+vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
