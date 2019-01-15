@@ -10,12 +10,13 @@ nmap <CR> :write<CR>
 
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
-nnoremap <Leader>h :bp<CR>
-nnoremap <Leader>l :bn<CR>
+nnoremap <Leader>bh :bp<CR>
+nnoremap <Leader>bl :bn<CR>
 nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
-nnoremap <Leader>d :bd<CR>
+nnoremap <Leader>bd :bd<CR>
+nnoremap <Leader>q :bd<CR>
 " navigate buffer with alt + h/l
 nnoremap <A-h> :bp<CR>
 nnoremap <A-l> :bn<CR>
@@ -43,15 +44,15 @@ nnoremap <C-_> :Commentary<CR>
 vnoremap <C-_> :Commentary<CR>
 " :7,17Commentary
 
-" multiline moving
-" <A-j>  ∆
-" <A-k>  ˚
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
+" " multiline moving
+" " <A-j>  ∆
+" " <A-k>  ˚
+" nnoremap ∆ :m .+1<CR>==
+" nnoremap ˚ :m .-2<CR>==
+" vnoremap ∆ :m '>+1<CR>gv=gv
+" vnoremap ˚ :m '<-2<CR>gv=gv
+" inoremap ∆ <Esc>:m .+1<CR>==gi
+" inoremap ˚ <Esc>:m .-2<CR>==gi
 
 " command mode maps
 " better command-line window scrolling with <C-P> & <C-N>
@@ -152,7 +153,7 @@ map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
 
 " PHP Documentor
 let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"
-nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+nnoremap <leader>dd :call pdv#DocumentWithSnip()<CR>
 
 " PHPactor
 " Include use statement
