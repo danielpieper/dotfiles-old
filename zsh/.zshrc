@@ -3,10 +3,10 @@
 #
 
 # Change default zim location
-export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+# export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Start zim
-[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
+# [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
 export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
@@ -55,9 +55,3 @@ if [[ -x "kubectl" ]]
 then
   source <(kubectl completion zsh)
 fi
-# BEGIN work
-#if [[ -x "minikube" ]]
-#then
-#  eval $(minikube docker-env)
-#fi
-# END work
