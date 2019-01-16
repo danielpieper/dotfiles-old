@@ -1,8 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-
-" for sort these lines
-" :'<,'>sort
-
 " general
 Plug 'https://github.com/sirver/UltiSnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " navigate from vim to tmux windows

@@ -99,3 +99,6 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
