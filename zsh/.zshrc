@@ -11,6 +11,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
+## alias pc="~/projects/integration/personio/perctl"
 #alias pc="~/projects/integration/perctl"
 #alias wl="nvim ~/Documents/worklog.txt"
 #
@@ -24,6 +25,7 @@ alias dc="docker-compose"
 alias dm="docker-machine"
 alias de="docker exec -it"
 alias d="docker"
+alias kc="kubectl"
 
 # kitty ssh
 alias ssh="kitty +kitten ssh"
