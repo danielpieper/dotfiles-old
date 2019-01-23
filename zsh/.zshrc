@@ -11,8 +11,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
-## alias pc="~/projects/integration/personio/perctl"
-#alias pc="~/projects/integration/perctl"
+#alias pc="~/projects/personio/perctl"
 #alias wl="nvim ~/Documents/worklog.txt"
 #
 # END work
