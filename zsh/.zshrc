@@ -19,6 +19,9 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 #source /usr/share/nvm/init-nvm.sh
 # END laptop
 
+# Add secrets
+[[ -s ${HOME}/.zsecrets ]] && source ${HOME}/.zsecrets
+
 # Docker
 alias dc="docker-compose"
 alias dm="docker-machine"
