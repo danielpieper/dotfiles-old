@@ -27,6 +27,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
+# BEGIN work
+#nnoremap <c-s-h> gT
+#nnoremap <c-s-l> gt
+# END work
 
 " Splitting Windows
 nmap <leader>v :vsplit<CR>
