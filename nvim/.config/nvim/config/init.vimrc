@@ -88,6 +88,6 @@ Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform
-" Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
+Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 
 call plug#end()
