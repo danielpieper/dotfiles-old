@@ -1,3 +1,7 @@
+# remap mac keyboard
+# ctrl - t : skhd -k "cmd - t"
+# ctrl - w : skhd -k "cmd - w"
+
 # open terminal, blazingly fast compared to iTerm/Hyper
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance
 
