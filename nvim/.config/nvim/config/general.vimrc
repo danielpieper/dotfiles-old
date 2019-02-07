@@ -15,8 +15,11 @@ if (has("termguicolors"))
 endif
 
 " Theme
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#1D1F213", "cterm": "235", "cterm16": "0" },
+\ "cursor_grey": { "gui": "#1f2123", "cterm": "170", "cterm16": "5" },
+\}
 colorscheme onedark
-set background=dark
 """"""""""""
 
 " allow backspacing over everything in insert mode
