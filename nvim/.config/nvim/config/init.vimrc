@@ -38,7 +38,6 @@ Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWor
 Plug 'https://github.com/lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
 Plug 'https://github.com/myusuf3/numbers.vim' " intelligently toggling line numbers
 Plug 'https://github.com/vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air
-Plug 'https://github.com/vim-airline/vim-airline-themes' " airline theme...
 Plug 'https://github.com/edkolev/tmuxline.vim' " tmux airline theming
 
 " colorschemes
