@@ -19,7 +19,10 @@ Plug 'https://github.com/ncm2/ncm2-syntax' " neco-syntax gathers syntax data fro
 Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deoplete/ncm
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
+
+" git
 Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'https://github.com/rbong/vim-flog'  " A lightweight and powerful git branch viewer for vim.
 
 " editing
 Plug 'https://github.com/Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
