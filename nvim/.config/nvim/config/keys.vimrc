@@ -124,8 +124,8 @@ nmap ga <Plug>(EasyAlign)
 nmap <Leader>f zr
 nmap <Leader>F zm
 " Folding {{{
-" set nofoldenable			  " disable folding
-set foldlevelstart=3	" start folding then we are 10 blocks deep
+set nofoldenable		  " disable folding
+" set foldlevelstart=3	" start folding then we are 10 blocks deep
 set foldnestmax=5		  " 10 nested fold max
 set foldmethod=indent	" fold based on indent level
 "}}}
