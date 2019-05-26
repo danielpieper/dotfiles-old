@@ -4,6 +4,7 @@
 
 # open terminal, blazingly fast compared to iTerm/Hyper
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance
+# cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
 
 # enter fullscreen mode for the focused container
 alt - f : chunkc tiling::window --toggle fullscreen
