@@ -8,15 +8,18 @@ Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for ne
 Plug 'https://github.com/jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs for Vim.
-Plug 'https://github.com/ervandew/supertab' " super tab
-Plug 'https://github.com/ncm2/ncm2' " auto-completion engine
-Plug 'https://github.com/roxma/nvim-yarp' " dependency for ncm2
-Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffer
-Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
-Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
-Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
-Plug 'https://github.com/ncm2/ncm2-syntax' " neco-syntax gathers syntax data from vim syntax file. This plugin will use these data as the source of ncm2 for completion.
+" Plug 'https://github.com/ervandew/supertab' " super tab
+" Plug 'https://github.com/ncm2/ncm2' " auto-completion engine
+" Plug 'https://github.com/roxma/nvim-yarp' " dependency for ncm2
+" Plug 'https://github.com/ncm2/ncm2-bufword' " auto-completion from current buffer
+" Plug 'https://github.com/ncm2/ncm2-path' " auto-completion for paths
+" Plug 'https://github.com/ncm2/ncm2-ultisnips' " auto-completion for snippets
+" Plug 'https://github.com/ncm2/ncm2-tmux' " auto-completion from other tmux panes
+" Plug 'https://github.com/ncm2/ncm2-syntax' " neco-syntax gathers syntax data from vim syntax file. This plugin will use these data as the source of ncm2 for completion.
 Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deoplete/ncm
+Plug 'https://github.com/neoclide/coc-neco'
+Plug 'https://github.com/neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}} " Coc is an intellisense engine for vim8 & neovim.
+
 " Plug 'ludovicchabant/vim-gutentags' " take care of ctags
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 
@@ -72,8 +75,8 @@ Plug 'https://github.com/hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defin
 Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 
 " php
-Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'} " refactoring, introspection tools and auto-completion source
-Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
+" Plug 'https://github.com/phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'} " refactoring, introspection tools and auto-completion source
+" Plug 'https://github.com/phpactor/ncm2-phpactor' " auto-completion from phpactor plugin
 Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 Plug 'https://github.com/tobyS/vmustache' " vmustache is an implementation of the Mustache template system in VIMScript.
@@ -86,7 +89,7 @@ Plug 'https://github.com/tobyS/pdv' " PDV - PHP Documentor for VIM - 2
 " Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
 
 " golang
-Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
+" Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform

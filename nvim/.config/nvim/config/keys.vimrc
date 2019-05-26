@@ -20,6 +20,9 @@ nnoremap <Leader>q :bd<CR>
 " navigate buffer with alt + h/l
 nnoremap <A-h> :bp<CR>
 nnoremap <A-l> :bn<CR>
+" control+shift for mac...
+nnoremap <C-H> :bp<CR>
+nnoremap <C-L> :bn<CR>
 
 " new buffer/tab
 nnoremap <Leader>e :enew<CR>

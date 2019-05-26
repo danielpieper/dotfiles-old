@@ -26,8 +26,8 @@ hi LineNr ctermbg=234
 
 " ncm2
 " enable ncm2 for all buffer
-autocmd BufEnter * call ncm2#enable_for_buffer()
-let g:ncm2#popup_delay = 240
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+" let g:ncm2#popup_delay = 240
 
 " note that must keep noinsert in completeopt, the others is optional
 set completeopt=noinsert,menuone,noselect
@@ -95,7 +95,7 @@ autocmd Filetype blade setlocal ts=2 sw=2 sts=0 expandtab
 autocmd FileType terraform setlocal commentstring=#%s
 
 " Supertab completion tab direction
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" let g:SuperTabDefaultCompletionType = "<c-n>"
 " let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
