@@ -13,17 +13,6 @@ hi Normal ctermbg=NONE
 hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
-" vim-lsp
-" let g:lsp_log_verbose = 1
-" let g:lsp_log_file = expand('~/vim-lsp.log')
-" let g:lsp_signs_enabled = 1         " enable signs
-" let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-" au User lsp_setup call lsp#register_server({
-     " \ 'name': 'php-language-server',
-     " \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
-     " \ 'whitelist': ['php'],
-     " \ })
-
 " ncm2
 " enable ncm2 for all buffer
 " autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -34,7 +23,6 @@ set completeopt=noinsert,menuone,noselect
 
 " supress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
 set shortmess+=c
-
 
 
 " delimitMate options
@@ -81,7 +69,7 @@ let g:NERDTreeQuitOnOpen = 1
 
 " vim-json
 hi! def link jsonKeyword Identifier
-let g:vim_json_syntax_conceal = 1
+let g:vim_json_syntax_conceal = 0
 
 " vue
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css

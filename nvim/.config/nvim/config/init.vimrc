@@ -82,15 +82,9 @@ Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin 
 Plug 'https://github.com/tobyS/vmustache' " vmustache is an implementation of the Mustache template system in VIMScript.
 Plug 'https://github.com/tobyS/pdv' " PDV - PHP Documentor for VIM - 2
 
-" php lsp
-" Plug 'https://github.com/ncm2/ncm2-vim-lsp' " ncm2 adapter for vim-lsp
-" Plug 'https://github.com/prabirshrestha/async.vim' " dependency of vim-lsp
-" Plug 'https://github.com/prabirshrestha/vim-lsp', {'for': 'php'} " lsp client
-" Plug 'https://github.com/felixfbecker/php-language-server', {'do': 'composer update', 'for': 'php'}
-
 " golang
 " Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
-Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
