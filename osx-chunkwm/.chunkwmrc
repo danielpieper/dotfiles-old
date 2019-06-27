@@ -67,3 +67,23 @@ chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
 chunkwm --load-sa
+
+
+chunkc tiling::rule --owner \"Google Chrome\" --desktop 1
+chunkc tiling::rule --owner \"kitty\" --desktop 2
+chunkc tiling::rule --owner \"Slack\" --desktop 4
+chunkc tiling::rule --owner \"Spotify\" --desktop 3
+chunkc tiling::rule --owner \"Postman\" --desktop 3
+
+chunkc tiling::rule --name "~/projects/personio" --desktop 5
+chunkc tiling::rule --name "~/projects/attribute-service/app" --desktop 6
+chunkc tiling::rule --owner \"Code\" --desktop 7
+chunkc tiling::rule --owner \"TablePlus\" --desktop 8
+
+chunkc tiling::rule --owner \"PhpStorm\" --except "~/projects/" --state float &
+chunkc tiling::rule --owner 'PhpStorm' --except '\[.+\]' --state float &
+chunkc tiling::rule --owner Finder --name Copy --state float
+chunkc tiling::rule --owner \"App Store\" --state float
+chunkc tiling::rule --owner \"Activity Monitor\" --state float
+chunkc tiling::rule --name \"System Preferences\" --state float
+chunkc tiling::rule --name \"Reminders\" --state float
