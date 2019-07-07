@@ -56,13 +56,6 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 bindsym $mod+h focus left
 
-# https://github.com/budRich/i3ass/tree/master/i3viswiz
-# bindsym $mod+j exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh down
-# bindsym $mod+k exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh up
-# bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh right
-# bindsym $mod+h exec --no-startup-id ~/.config/i3/scripts/i3viswiz.sh left
-
-
 # move focused window
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
