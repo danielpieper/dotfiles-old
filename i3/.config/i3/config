@@ -231,8 +231,7 @@ bindsym $mod+Shift+space exec rofi -run-command "gksudo {cmd}" -show drun -p 'gk
 # END laptop
 
 exec --no-startup-id compton -f
-# exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
-exec --no-startup-id himawaripy  -o 1 -l 4 -d 9
+exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpaper/*.jpg
 exec dex -ae i3
 
 # Application specific settings
