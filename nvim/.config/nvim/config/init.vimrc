@@ -14,9 +14,6 @@ Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deo
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}} " Coc is an intellisense engine for vim8 & neovim.
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'https://github.com/tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most.
-
-" projects
-Plug 'https://github.com/amiorin/vim-project' " lcd to the root of the project everytime you BufEnter a file inside a project.
 Plug 'https://github.com/mhinz/vim-startify' " This plugin provides a start screen for Vim and Neovim.
 
 " git
