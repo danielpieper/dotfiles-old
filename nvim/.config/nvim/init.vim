@@ -11,5 +11,5 @@ source $HOME/.config/nvim/config/plugin/colorizer.vimrc
 source $HOME/.config/nvim/config/plugin/nerdtree.vimrc
 source $HOME/.config/nvim/config/plugin/editorconfig-vim.vimrc
 source $HOME/.config/nvim/config/plugin/delimitmate.vimrc
-source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
 source $HOME/.config/nvim/config/plugin/vim-startify.vimrc
+source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
