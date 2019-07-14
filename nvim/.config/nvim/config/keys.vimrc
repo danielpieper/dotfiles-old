@@ -17,12 +17,16 @@ nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
 nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>q :bd<CR>
-" navigate buffer with alt + h/l
-nnoremap <A-h> :bp<CR>
-nnoremap <A-l> :bn<CR>
-" control+shift for mac...
-nnoremap <C-H> :bp<CR>
-nnoremap <C-L> :bn<CR>
+
+if system('uname -s') == "Darwin\n"
+  " control+shift for mac...
+  nnoremap <C-H> :bp<CR>
+  nnoremap <C-L> :bn<CR>
+else
+  " navigate buffer with alt + h/l
+  nnoremap <A-h> :bp<CR>
+  nnoremap <A-l> :bn<CR>
+endif
 
 " new buffer/tab
 nnoremap <Leader>e :enew<CR>
@@ -46,21 +50,6 @@ nnoremap <Leader>P "+P
 nnoremap <C-_> :Commentary<CR>
 vnoremap <C-_> :Commentary<CR>
 " :7,17Commentary
-
-" " multiline moving
-" " <A-j>  ∆
-" " <A-k>  ˚
-" nnoremap ∆ :m .+1<CR>==
-" nnoremap ˚ :m .-2<CR>==
-" vnoremap ∆ :m '>+1<CR>gv=gv
-" vnoremap ˚ :m '<-2<CR>gv=gv
-" inoremap ∆ <Esc>:m .+1<CR>==gi
-" inoremap ˚ <Esc>:m .-2<CR>==gi
-
-" command mode maps
-" better command-line window scrolling with <C-P> & <C-N>
-" cnoremap <C-p> <Up>
-" cnoremap <C-n> <Down>
 
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -105,9 +94,6 @@ set showmode
 " override read-only permissions
 cmap w!! %!sudo tee > /dev/null %
 
-" allow ,, for vimsneak
-nmap <Leader>, <Plug>SneakPrevious
-
 " camelCase motion settings
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
@@ -135,9 +121,6 @@ set foldmethod=indent	" fold based on indent level
 
 " ,<tab> for regular tab
 inoremap <Leader><Tab> <Space><Space>
-
-" tern
-autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
 " colorizer
 nmap <Leader>tc :ColorToggle<CR>

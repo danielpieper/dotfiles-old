@@ -14,13 +14,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-" Theme
-let g:onedark_color_overrides = {
-\ "black": {"gui": "#1D1F21", "cterm": "235", "cterm16": "0" },
-\ "cursor_grey": { "gui": "#1f2123", "cterm": "170", "cterm16": "5" },
-\}
-colorscheme onedark
-""""""""""""
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -138,3 +131,41 @@ if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('c
   set clipboard+=unnamed
 endif
 " set clipboard=unnamedplus " salam
+
+filetype plugin indent on
+
+if system('uname -s') == "Darwin\n"
+  " OSX
+  let g:python3_host_prog = '/usr/local/bin/python3'
+else
+  " Linux
+  let g:python3_host_prog = '/usr/bin/python3'
+endif
+
+" make background transparent
+hi Normal ctermbg=NONE
+hi EndOfBuffer ctermbg=NONE
+hi LineNr ctermbg=234
+
+" note that must keep noinsert in completeopt, the others is optional
+set completeopt=noinsert,menuone,noselect
+
+" supress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
+set shortmess+=c
+
+" enable matchit (for matching tags with %)
+runtime macros/matchit.vim
+
+" javascript libraries syntax
+let g:used_javascript_libs = 'vue' " underscore,react,chai, more to see -> /othree/javascript-libraries-syntax.vim
+
+" vue
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
+" For php tab space
+autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype blade setlocal ts=2 sw=2 sts=0 expandtab
+
+" Terraform commentary
+autocmd FileType terraform setlocal commentstring=#%s
+

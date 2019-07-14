@@ -7,12 +7,17 @@ Plug 'https://github.com/honza/vim-snippets' " snippets for various programming 
 Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for neovim, via fzy[1].
 Plug 'https://github.com/jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
+Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " A plugin of NERDTree showing git status flags.
 Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deoplete/ncm
-Plug 'https://github.com/neoclide/coc-neco'
-Plug 'https://github.com/neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}} " Coc is an intellisense engine for vim8 & neovim.
-
+" Plug 'https://github.com/neoclide/coc-neco'
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}} " Coc is an intellisense engine for vim8 & neovim.
 Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
+Plug 'https://github.com/tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most.
+
+" projects
+Plug 'https://github.com/amiorin/vim-project' " lcd to the root of the project everytime you BufEnter a file inside a project.
+Plug 'https://github.com/mhinz/vim-startify' " This plugin provides a start screen for Vim and Neovim.
 
 " git
 Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
