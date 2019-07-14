@@ -8,7 +8,14 @@ ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Start Zim
 [[ -s ${ZIM_HOME}/zimfw.zsh ]] && source ${ZIM_HOME}/zimfw.zsh
 
-export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
+# include zsecrets
+[[ -s ${HOME}/.zsecrets ]] && source ${HOME}/.zsecrets
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=UTF-8
+
+export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin:~/go/bin:~/.gem/ruby/2.6.0/bin
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
 #alias pc="~/projects/personio/perctl"
@@ -18,9 +25,6 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin
 # BEGIN laptop
 #source /usr/share/nvm/init-nvm.sh
 # END laptop
-
-# Add secrets
-[[ -s ${HOME}/.zsecrets ]] && source ${HOME}/.zsecrets
 
 # Docker
 alias dc="docker-compose"
