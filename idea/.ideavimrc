@@ -28,8 +28,8 @@ nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
 # BEGIN work
-#nnoremap <c-s-h> gT
-#nnoremap <c-s-l> gt
+#nnoremap <c-a-h> gT
+#nnoremap <c-a-l> gt
 # END work
 
 " Splitting Windows
@@ -103,11 +103,3 @@ nnoremap / :action Find<cr>
 
 " AceJump Plugin - Jump to Character
 nmap <leader>f :action AceAction<cr>
-
-" Laravel Mappings
-nmap <Leader>lrw :e routes/web.php<cr>
-nmap <Leader>lra :e routes/api.php<cr>
-nmap <Leader>lca :e config/app.php<cr>
-nmap <Leader>lcd :e config/database.php<cr>
-nmap <Leader>lcc :e composer.json<cr>
-nmap <Leader>lce :e .env<cr>
