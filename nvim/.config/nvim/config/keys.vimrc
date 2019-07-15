@@ -19,9 +19,9 @@ nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>q :bd<CR>
 
 if system('uname -s') == "Darwin\n"
-  " control+shift for mac...
-  nnoremap <C-H> :bp<CR>
-  nnoremap <C-L> :bn<CR>
+  " control+alt for mac...
+  nnoremap <C-A-h> :bp<CR>
+  nnoremap <C-A-l> :bn<CR>
 else
   " navigate buffer with alt + h/l
   nnoremap <A-h> :bp<CR>
