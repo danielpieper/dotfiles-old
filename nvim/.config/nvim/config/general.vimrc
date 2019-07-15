@@ -92,7 +92,6 @@ set ffs=unix,dos,mac
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
-set guifont=Consolas\ Nerd\ Font\ 11
 
 set so=5 " scroll lines above/below cursor
 set sidescrolloff=5
