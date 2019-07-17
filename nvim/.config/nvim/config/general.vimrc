@@ -82,6 +82,9 @@ set nrformats-=octal
 set ttimeout
 set ttimeoutlen=100
 
+" update files if for example git branch changes
+set autoread
+
 " detect .md as markdown instead of modula-2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
@@ -106,8 +109,6 @@ endif
 if has('path_extra')
   setglobal tags-=./tags tags^=./tags;
 endif
-
-set autoread
 
 if &history < 1000
   set history=1000
