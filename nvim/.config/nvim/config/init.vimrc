@@ -1,6 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-" general
-Plug 'https://github.com/sirver/UltiSnips' " completion ~~  UltiSnips is the ultimate solution for snippets in Vim
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
 Plug 'https://github.com/haya14busa/incsearch.vim' " incrementally highlights ALL pattern matches unlike default 'incsearch'.
 Plug 'https://github.com/honza/vim-snippets' " snippets for various programming languages
@@ -59,6 +57,9 @@ Plug 'https://github.com/wellle/targets.vim' " ci' to (cut in single quote), als
 
 " debugging
 " Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
+"
+" Testing
+Plug 'https://github.com/janko/vim-test' " Run your tests at the speed of thought
 
 " html
 Plug 'https://github.com/mattn/emmet-vim' " provides support for expanding abbreviations similar to emmet
@@ -68,14 +69,7 @@ Plug 'https://github.com/hail2u/vim-css3-syntax' " CSS3 syntax (and syntax defin
 Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 
 " php
-Plug 'https://github.com/arnaud-lb/vim-php-namespace' " insert 'use' statements automatically
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
-Plug 'https://github.com/tobyS/vmustache' " vmustache is an implementation of the Mustache template system in VIMScript.
-Plug 'https://github.com/tobyS/pdv' " PDV - PHP Documentor for VIM - 2
-
-" golang
-" Plug 'https://github.com/ncm2/ncm2-go' " auto-completion for golang
-" Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete

@@ -7,7 +7,6 @@ source $HOME/.config/nvim/BufOnly.vim
 source $HOME/.config/nvim/config/plugin/onedark.vimrc
 source $HOME/.config/nvim/config/plugin/vim-airline.vimrc
 source $HOME/.config/nvim/config/plugin/coc.vimrc
-source $HOME/.config/nvim/config/plugin/ultisnips.vimrc
 source $HOME/.config/nvim/config/plugin/ale.vimrc
 source $HOME/.config/nvim/config/plugin/colorizer.vimrc
 source $HOME/.config/nvim/config/plugin/nerdtree.vimrc
