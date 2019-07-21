@@ -1,9 +1,6 @@
 " map Leader
 let mapleader = ","
 
-" keep backward f search, remapping it to ,;
-nnoremap <Leader>; ,
-
 " When in normal mode and I hit Enter,
 " then save file please
 nmap <CR> :write<CR>
@@ -47,17 +44,8 @@ vnoremap <Leader>d "+d
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 
-" for commentary
-nnoremap <C-_> :Commentary<CR>
-vnoremap <C-_> :Commentary<CR>
-" :7,17Commentary
-
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-
-" neovim-fuzzy
-nnoremap <C-p> :FuzzyOpen<CR>
-nnoremap <C-f> :FuzzyGrep<Space>
 
 " Function keys
 nnoremap <silent> <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -76,16 +64,13 @@ inoremap <C-U> <C-G>u<C-U>
 map Q gq
 
 " relative line numbers
-nnoremap <Leader>3 :NumbersToggle<CR>
-
-" snippets
-let g:UltiSnipsExpandTrigger="<c-j>"
+" nnoremap <Leader>3 :NumbersToggle<CR>
 
 " remap number increment to C-s (C-a is already in use by tmux)
-nmap <C-s> <C-a>
+" nmap <C-s> <C-a>
 
 " Word count selection
-vnoremap <Leader>w :w !wc -w<CR>
+" vnoremap <Leader>w :w !wc -w<CR>
 
 " vim paste mode toggle (for fixing indentation issues when pasting text)
 nnoremap <F2> :set invpaste paste?<CR>
@@ -94,20 +79,6 @@ set showmode
 
 " override read-only permissions
 cmap w!! %!sudo tee > /dev/null %
-
-" camelCase motion settings
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
-
-" start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-
-" start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
 
 " folding
 " nmap <Leader>f zf%
@@ -120,16 +91,8 @@ set foldnestmax=5		  " 10 nested fold max
 set foldmethod=indent	" fold based on indent level
 "}}}
 
-" ,<tab> for regular tab
-inoremap <Leader><Tab> <Space><Space>
-
 " colorizer
 nmap <Leader>tc :ColorToggle<CR>
 
 " for vnoremap selection search
 vnoremap / y/<C-R>"<CR>
-
-" Apply php-cs-fixer:
-command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
-map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=psr2<cr>
-

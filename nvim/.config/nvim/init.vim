@@ -14,3 +14,8 @@ source $HOME/.config/nvim/config/plugin/editorconfig-vim.vimrc
 source $HOME/.config/nvim/config/plugin/delimitmate.vimrc
 source $HOME/.config/nvim/config/plugin/vim-startify.vimrc
 source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
+source $HOME/.config/nvim/config/plugin/vim-test.vimrc
+source $HOME/.config/nvim/config/plugin/vim-commentary.vimrc
+source $HOME/.config/nvim/config/plugin/vim-easy-align.vimrc
+source $HOME/.config/nvim/config/plugin/camelcasemotion.vimrc
+source $HOME/.config/nvim/config/plugin/neovim-fuzzy.vimrc
