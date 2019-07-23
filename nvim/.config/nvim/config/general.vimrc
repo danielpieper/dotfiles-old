@@ -148,9 +148,6 @@ hi Normal ctermbg=NONE
 hi EndOfBuffer ctermbg=NONE
 hi LineNr ctermbg=234
 
-" note that must keep noinsert in completeopt, the others is optional
-set completeopt=noinsert,menuone,noselect
-
 " supress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
 set shortmess+=c
 

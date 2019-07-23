@@ -14,6 +14,9 @@ Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin fo
 Plug 'https://github.com/tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most.
 Plug 'https://github.com/mhinz/vim-startify' " This plugin provides a start screen for Vim and Neovim.
 
+" notes
+" Plug 'https://github.com/neilagabriel/vim-geeknote' " Integrates Geeknote/Evernote into Vim and Neovim.
+
 " git
 Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'https://github.com/rbong/vim-flog'  " A lightweight and powerful git branch viewer for vim.

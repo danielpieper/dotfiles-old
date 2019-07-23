@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-json','coc-html','coc-css','coc-phpls','coc-yaml','coc-snippets','coc-lists','coc-gocode','coc-sh','coc-project','coc-ultisnips','coc-highlight','coc-pairs','coc-yank','coc-git']
+let g:coc_global_extensions = ['coc-json','coc-html','coc-css','coc-phpls','coc-yaml','coc-snippets','coc-lists','coc-gocode','coc-sh','coc-project','coc-ultisnips','coc-highlight','coc-pairs','coc-yank','coc-git','coc-python']
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -74,14 +74,15 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Using CocList
+nnoremap <silent> <space>l  :<C-u>CocList<cr>
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>t  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
@@ -89,4 +90,5 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
+nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
