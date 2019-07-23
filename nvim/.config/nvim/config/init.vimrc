@@ -71,6 +71,9 @@ Plug 'https://github.com/othree/csscomplete.vim' " Update the bult-in CSS comple
 " php
 Plug 'https://github.com/w0rp/ale' " ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim 0.2.0+ and Vim 8 while you edit your text files.
 
+" golang
+Plug 'https://github.com/fatih/vim-go' " Go development plugin for Vim
+
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
 
