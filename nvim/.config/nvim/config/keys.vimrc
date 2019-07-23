@@ -48,11 +48,16 @@ nnoremap <Leader>P "+P
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Function keys
+
 nnoremap <silent> <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 nnoremap <F5> :source $HOME/.config/nvim/init.vim<CR>
 nnoremap <F6> :set hlsearch!<CR>
 nnoremap <F7> :UndotreeToggle<CR>
+" vim paste mode toggle (for fixing indentation issues when pasting text)
+nnoremap <F8> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 " nnoremap <F8> :Geeknote<CR>
 " indent whole file according to syntax rules
 " noremap <F9> gg=G
@@ -71,11 +76,6 @@ map Q gq
 
 " Word count selection
 " vnoremap <Leader>w :w !wc -w<CR>
-
-" vim paste mode toggle (for fixing indentation issues when pasting text)
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-set showmode
 
 " override read-only permissions
 cmap w!! %!sudo tee > /dev/null %
