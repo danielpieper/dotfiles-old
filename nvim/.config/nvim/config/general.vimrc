@@ -135,6 +135,9 @@ endif
 
 filetype plugin indent on
 
+" open help in vertical split
+autocmd FileType help wincmd L
+
 if system('uname -s') == "Darwin\n"
   " OSX
   let g:python3_host_prog = '/usr/local/bin/python3'
