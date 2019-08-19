@@ -57,7 +57,7 @@ nnoremap <leader>Q :action ReopenClosedTab<cr>
 nnoremap <leader>\ :action VimFilePrevious<cr>
 nnoremap <leader>e :action SearchEverywhere<cr>
 nnoremap <leader>E :action Switcher<cr>
-nnoremap <leader>t :action FileStructurePopup<cr>
+nnoremap <leader>o :action FileStructurePopup<cr>
 nnoremap <leader>T :action GotoSymbol<cr>
 nnoremap <leader>c :action GotoClass<cr>
 nnoremap <leader>a :action GotoAction<cr>

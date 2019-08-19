@@ -13,7 +13,7 @@ nnoremap <Leader>bf :bf<CR>
 nnoremap <Leader>bl :bl<CR>
 nnoremap <Leader>bw :w<CR>:bd<CR>
 nnoremap <Leader>bd :bd<CR>
-nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>q :BD<CR>
 nnoremap <Leader>Q :BufOnly<CR>
 
 if system('uname -s') == "Darwin\n"

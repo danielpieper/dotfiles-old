@@ -33,6 +33,7 @@ Plug 'tpope/vim-speeddating' " a Ctrl-a/Ctrl-x command to increment / decrement 
 Plug 'tpope/vim-surround' " ysiw' | ds{ds)  provides mappings to easily delete, change and add such surroundings in pairs
 Plug 'tpope/vim-unimpaired' " [a cursor to previous a, ]x cursor to next x
 Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWord
+Plug 'https://github.com/qpkorr/vim-bufkill' " unload, delete or wipe a buffer without closing the window
 
 " eye candy
 Plug 'https://github.com/lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
