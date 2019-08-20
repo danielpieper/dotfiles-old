@@ -16,6 +16,7 @@ function annihilateDesktops() {
   desktops=$(chunkc tiling::query --desktops-for-monitor $(chunkc tiling::query --monitor id) | wc -w | xargs)
   for n in $(seq $desktops); do
     chunkc tiling::desktop --annihilate
+    sleep 0.3
   done
 }
 
@@ -23,6 +24,7 @@ function createDesktops() {
   number=$1
   for n in $(seq $number); do
     chunkc tiling::desktop --create
+    sleep 0.3
   done
 }
 
