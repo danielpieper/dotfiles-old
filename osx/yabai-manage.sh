@@ -32,12 +32,12 @@ function createDesktops() {
 
 
 if [[ "$1" = "stop" ]]; then
-  brew services stop chunkwm
+  brew services stop yabai
   brew services stop skhd
 fi
 
 if [[ "$1" = "restart" ]]; then
-  brew services restart chunkwm
+  brew services restart yabai
   brew services restart skhd
 fi
 
@@ -48,7 +48,7 @@ if [[ "$1" = "refresh" ]]; then
     # chunkc tiling::monitor -f 1
     yabai -m display --focus 1
     annihilateDesktops
-    createDesktops 8
+    createDesktops 9
   else
     # chunkc tiling::monitor -f 1
     yabai -m display --focus 1
@@ -61,7 +61,7 @@ if [[ "$1" = "refresh" ]]; then
     createDesktops 4
   fi
 
-  source .yabairc
+  source ~/.yabairc
 fi
 
 # echo "$(chunkc tiling::query --desktop id):$(chunkc tiling::query --desktop mode) | length=5"
