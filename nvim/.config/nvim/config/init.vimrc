@@ -60,9 +60,10 @@ Plug 'kana/vim-textobj-user' " create your own text objects without pain, eg. ca
 Plug 'https://github.com/wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
 
 " debugging
-" Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
+Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
 "
 " Testing
+Plug 'https://github.com/tpope/vim-dispatch' " Asynchronous build and test dispatcher
 Plug 'https://github.com/janko/vim-test' " Run your tests at the speed of thought
 
 " html
