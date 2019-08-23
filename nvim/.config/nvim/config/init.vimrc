@@ -24,7 +24,7 @@ Plug 'https://github.com/rbong/vim-flog'  " A lightweight and powerful git branc
 " editing
 Plug 'https://github.com/Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'https://github.com/airblade/vim-gitgutter' " shows a git diff in the 'gutter'
-Plug 'junegunn/vim-easy-align' " indent multi text ( easy align : so many feature )
+Plug 'https://github.com/junegunn/vim-easy-align' " indent multi text ( easy align : so many feature )
 Plug 'mbbill/undotree' " undo tree
 Plug 'nathanaelkane/vim-indent-guides' " `,ig` to toggle
 Plug 'tpope/vim-commentary' " for multiline became to comment lines

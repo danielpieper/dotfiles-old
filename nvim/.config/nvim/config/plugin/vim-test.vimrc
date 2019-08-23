@@ -18,4 +18,3 @@ let g:test#custom_transformations = {'personio': function('PersonioTransform'), 
 let g:test#transformation = 'personio'
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
-
