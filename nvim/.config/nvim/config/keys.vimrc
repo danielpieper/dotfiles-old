@@ -6,13 +6,6 @@ let mapleader = ","
 nmap <CR> :write<CR>
 
 " buffer keys
-nnoremap <Leader>bb :b#<CR>
-nnoremap <Leader>bh :bp<CR>
-nnoremap <Leader>bl :bn<CR>
-nnoremap <Leader>bf :bf<CR>
-nnoremap <Leader>bl :bl<CR>
-nnoremap <Leader>bw :w<CR>:bd<CR>
-nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>q :BD<CR>
 nnoremap <Leader>Q :BufOnly<CR>
 
@@ -30,13 +23,8 @@ endif
 nnoremap <Leader>e :enew<CR>
 
 " window keys
-nnoremap <Leader>w< <C-w><
-nnoremap <Leader>w> <C-w>>
-nnoremap <Leader>w- <C-w>-
-nnoremap <Leader>w+ <C-w>+
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>v :vsplit<CR>
-nnoremap <Leader>wx :close<CR>
 
 " Shortcut for copying to/from System Clipboard
 vnoremap <Leader>y "+y
@@ -82,8 +70,8 @@ cmap w!! %!sudo tee > /dev/null %
 
 " folding
 " nmap <Leader>f zf%
-nmap <Leader>f zr
-nmap <Leader>F zm
+nmap <Leader>fo zr
+nmap <Leader>Fo zm
 " Folding {{{
 set nofoldenable		  " disable folding
 " set foldlevelstart=3	" start folding then we are 10 blocks deep
