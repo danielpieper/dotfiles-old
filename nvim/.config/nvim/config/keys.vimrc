@@ -7,7 +7,8 @@ nmap <CR> :write<CR>
 
 " buffer keys
 nnoremap <Leader>q :BD<CR>
-nnoremap <Leader>Q :BufOnly<CR>
+nnoremap <Leader>Q :bd<CR>
+nnoremap <Leader>QQ :BufOnly<CR>
 
 if system('uname -s') == "Darwin\n"
   " control+alt for mac...
