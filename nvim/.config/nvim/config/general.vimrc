@@ -84,6 +84,7 @@ set ttimeoutlen=100
 
 " update files if for example git branch changes
 set autoread
+au FocusGained,BufEnter * :checktime " https://vi.stackexchange.com/a/13092
 
 " detect .md as markdown instead of modula-2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
