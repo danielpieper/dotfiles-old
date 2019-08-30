@@ -1,4 +1,24 @@
-let g:coc_global_extensions = ['coc-tabnine', 'coc-json','coc-html','coc-css','coc-phpls','coc-yaml','coc-snippets','coc-lists','coc-gocode','coc-sh','coc-project','coc-ultisnips','coc-highlight','coc-pairs','coc-yank','coc-git','coc-python']
+let g:coc_global_extensions = [
+      \ 'coc-tabnine',
+      \ 'coc-json',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-phpls',
+      \ 'coc-yaml',
+      \ 'coc-snippets',
+      \ 'coc-lists',
+      \ 'coc-gocode',
+      \ 'coc-sh',
+      \ 'coc-project',
+      \ 'coc-ultisnips',
+      \ 'coc-highlight',
+      \ 'coc-pairs',
+      \ 'coc-yank',
+      \ 'coc-git',
+      \ 'coc-python',
+      \ 'coc-tsserver',
+      \ 'coc-tslint-plugin',
+      \ ]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>

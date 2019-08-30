@@ -13,6 +13,8 @@ let g:ale_linters = {
       \ 'php': ['php', 'phpcs', 'phpmd'],
       \ 'go': ['gopls', 'gofmt', 'golint'],
       \ 'sh': ['shell'],
+      \ 'js': ['eslint'],
+      \ 'jsx': ['eslint'],
       \}
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trime_whitespace'],
