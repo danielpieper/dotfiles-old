@@ -129,9 +129,9 @@ set hid " buffer becomes hidden when abandoned
 autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore "_"
 
 " clipboard " salam:x
-if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
-  set clipboard+=unnamed
-endif
+" if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
+"   set clipboard+=unnamed
+" endif
 " set clipboard=unnamedplus " salam
 
 filetype plugin indent on
@@ -163,11 +163,3 @@ let g:used_javascript_libs = 'vue' " underscore,react,chai, more to see -> /othr
 
 " vue
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-
-" For php tab space
-autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype blade setlocal ts=2 sw=2 sts=0 expandtab
-
-" Terraform commentary
-autocmd FileType terraform setlocal commentstring=#%s
-
