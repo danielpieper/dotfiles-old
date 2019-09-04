@@ -10,7 +10,7 @@ let g:ale_disable_lsp = 1
 let g:ale_maximum_file_size = 80000 " 80kb?
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
-      \ 'php': ['php', 'phpcs', 'phpmd'],
+      \ 'php': ['phpcs', 'phpmd'],
       \ 'go': ['gopls', 'gofmt', 'golint'],
       \ 'sh': ['shell'],
       \ 'js': ['eslint'],

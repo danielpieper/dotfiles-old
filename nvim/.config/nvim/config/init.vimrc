@@ -35,6 +35,7 @@ Plug 'tpope/vim-unimpaired' " [a cursor to previous a, ]x cursor to next x
 " Plug 'https://github.com/tpope/vim-projectionist' " Granular project configuration
 Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWord
 Plug 'https://github.com/qpkorr/vim-bufkill' " unload, delete or wipe a buffer without closing the window
+Plug 'https://github.com/sirver/UltiSnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
 
 " eye candy
 Plug 'https://github.com/lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
