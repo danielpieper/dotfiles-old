@@ -10,19 +10,6 @@ nnoremap <Leader>q :BD<CR>
 nnoremap <Leader>Q :bd<CR>
 nnoremap <Leader>QQ :BufOnly<CR>
 
-if system('uname -s') == "Darwin\n"
-  " control+alt for mac...
-  nnoremap <C-A-h> :bp<CR>
-  nnoremap <C-A-l> :bn<CR>
-else
-  " navigate buffer with alt + h/l
-  nnoremap <A-h> :bp<CR>
-  nnoremap <A-l> :bn<CR>
-endif
-
-" new buffer/tab
-nnoremap <Leader>e :enew<CR>
-
 " window keys
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>v :vsplit<CR>

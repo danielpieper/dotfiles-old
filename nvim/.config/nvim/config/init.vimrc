@@ -2,7 +2,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " navigate from vim to tmux windows
 Plug 'https://github.com/haya14busa/incsearch.vim' " incrementally highlights ALL pattern matches unlike default 'incsearch'.
 Plug 'https://github.com/honza/vim-snippets' " snippets for various programming languages
-Plug 'https://github.com/cloudhead/neovim-fuzzy.git' " Fuzzy file finding for neovim, via fzy[1].
+Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim' " A command-line fuzzy finder
 Plug 'https://github.com/jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
 Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " A plugin of NERDTree showing git status flags.
