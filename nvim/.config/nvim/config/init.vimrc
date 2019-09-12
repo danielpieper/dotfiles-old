@@ -20,6 +20,7 @@ Plug 'https://github.com/mhinz/vim-startify' " This plugin provides a start scre
 
 " git
 Plug 'https://github.com/tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'https://github.com/shumphrey/fugitive-gitlab.vim' " An extension to fugitive.vim for gitlab support
 Plug 'https://github.com/rbong/vim-flog'  " A lightweight and powerful git branch viewer for vim.
 
 " editing

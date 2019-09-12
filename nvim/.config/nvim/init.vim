@@ -20,3 +20,6 @@ source $HOME/.config/nvim/config/plugin/vim-commentary.vimrc
 source $HOME/.config/nvim/config/plugin/vim-easy-align.vimrc
 source $HOME/.config/nvim/config/plugin/camelcasemotion.vimrc
 source $HOME/.config/nvim/config/plugin/fzf.vimrc
+"BEGIN work
+"source $HOME/.config/nvim/config/plugin/fugitive-gitlab.vimrc
+"END work

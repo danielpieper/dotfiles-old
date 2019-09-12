@@ -63,3 +63,5 @@ if [[ -x "kubectl" ]]
 then
   source <(kubectl completion zsh)
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
