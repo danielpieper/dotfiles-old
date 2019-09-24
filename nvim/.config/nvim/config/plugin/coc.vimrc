@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-lists',
       \ 'coc-gocode',
-      \ 'coc-sh',
       \ 'coc-project',
       \ 'coc-highlight',
       \ 'coc-pairs',
