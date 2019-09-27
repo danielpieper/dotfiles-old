@@ -63,5 +63,9 @@ if [[ -x "kubectl" ]]
 then
   source <(kubectl completion zsh)
 fi
+if [[ -x "jira" ]]
+then
+  source <(jira --completion-script-zsh)
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
