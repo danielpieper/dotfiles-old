@@ -8,3 +8,4 @@ _ide_helper_models.php
 .vscode
 .projections.json
 .php_cs.cache
+.jira.d
