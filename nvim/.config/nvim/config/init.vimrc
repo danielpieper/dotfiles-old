@@ -5,17 +5,15 @@ Plug 'https://github.com/honza/vim-snippets' " snippets for various programming 
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/junegunn/fzf.vim' " A command-line fuzzy finder
 Plug 'https://github.com/jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list
-Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " nerd tree
+Plug 'https://github.com/scrooloose/nerdtree' " The NERDTree is a file system explorer for the Vim editor.
 Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " A plugin of NERDTree showing git status flags.
 Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'https://github.com/shougo/neco-syntax' " Syntax source for neocomplete/deoplete/ncm
 " Plug 'https://github.com/neoclide/coc-neco'
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}} " Coc is an intellisense engine for vim8 & neovim.
-Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'https://github.com/tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most.
 Plug 'https://github.com/mhinz/vim-startify' " This plugin provides a start screen for Vim and Neovim.
 Plug 'https://github.com/moll/vim-bbye' " Bbye allows you to do delete buffers (close files) without closing your windows or messing up your layout.
-Plug 'https://github.com/easymotion/vim-easymotion' " EasyMotion provides a much simpler way to use some motions in vim.
 
 " notes
 " Plug 'https://github.com/neilagabriel/vim-geeknote' " Integrates Geeknote/Evernote into Vim and Neovim.
@@ -37,7 +35,7 @@ Plug 'tpope/vim-speeddating' " a Ctrl-a/Ctrl-x command to increment / decrement 
 Plug 'tpope/vim-surround' " ysiw' | ds{ds)  provides mappings to easily delete, change and add such surroundings in pairs
 Plug 'tpope/vim-unimpaired' " [a cursor to previous a, ]x cursor to next x
 " Plug 'https://github.com/tpope/vim-projectionist' " Granular project configuration
-Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWord
+Plug 'https://github.com/editorconfig/editorconfig-vim' " EditorConfig plugin for Vim http://editorconfig.org
 
 " eye candy
 Plug 'https://github.com/lilydjwg/colorizer', { 'on': 'ColorToggle' } " #aaa to Colorize
@@ -62,6 +60,8 @@ Plug 'kana/vim-textobj-function' " Text objects for functions, build error ??!
 Plug 'kana/vim-textobj-indent' " Text objects for indented blocks of lines, eg. y- yank of blocks of lines
 Plug 'kana/vim-textobj-user' " create your own text objects without pain, eg. call textobj#user#plugin('datetime', { ...
 Plug 'https://github.com/wellle/targets.vim' " ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
+Plug 'https://github.com/easymotion/vim-easymotion' " EasyMotion provides a much simpler way to use some motions in vim.
+Plug 'vim-scripts/camelcasemotion' " when w,e,b help cursor stay at camelCaseWord
 
 " debugging
 Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
@@ -85,5 +85,8 @@ Plug 'https://github.com/fatih/vim-go' " Go development plugin for Vim
 
 " terraform
 Plug 'https://github.com/juliosueiras/vim-terraform-completion' " Terraform file autocomplete
+
+" docs
+Plug 'https://github.com/rhysd/devdocs.vim' " This is a Vim plugin for devdocs, which is an awesome multiple API documentation service. You can open and search devdocs from Vim.
 
 call plug#end()
