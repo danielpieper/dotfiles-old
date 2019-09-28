@@ -6,8 +6,6 @@ let mapleader = ","
 nmap <CR> :write<CR>
 
 " buffer keys
-nnoremap <Leader>q :BD<CR>
-nnoremap <Leader>Q :bd<CR>
 nnoremap <Leader>QQ :BufOnly<CR>
 
 " window keys
