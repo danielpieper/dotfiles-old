@@ -64,6 +64,9 @@ if has("autocmd")
 
   augroup END
 
+  " Automatically make splits equal in size
+  autocmd VimResized * wincmd =
+
 endif " has("autocmd")
 
 " tab stuff
