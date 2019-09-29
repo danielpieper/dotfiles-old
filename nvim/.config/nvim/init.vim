@@ -23,6 +23,7 @@ source $HOME/.config/nvim/config/plugin/camelcasemotion.vimrc
 source $HOME/.config/nvim/config/plugin/fzf.vimrc
 source $HOME/.config/nvim/config/plugin/vim-fugitive.vimrc
 source $HOME/.config/nvim/config/plugin/devdocs.vimrc
+source $HOME/.config/nvim/config/plugin/auto-pairs.vimrc
 "BEGIN work
 "source $HOME/.config/nvim/config/plugin/fugitive-gitlab.vimrc
 "END work

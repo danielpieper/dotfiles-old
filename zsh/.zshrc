@@ -41,6 +41,12 @@ alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias l='ls'
 alias ll='ls -lah'
+if [[ -x "$(command -v exa)" ]]
+then
+  alias ls="exa"
+  alias l="exa"
+  alias ll="exa -lah --git --group-directories-first"
+fi
 
 alias vi="nvim"
 alias vim="nvim"
@@ -50,20 +56,20 @@ alias xmm="xmodmap ~/.Xmodmap"
 
 alias ap="ansible-playbook"
 alias tf="terraform"
-if [[ -x "bat" ]]
+if [[ -x "$(command -v bat)" ]]
 then
   alias cat="bat"
 fi
 
-if [[ -x "hcloud" ]]
+if [[ -x "$(command -v hcloud)" ]]
 then
   source <(hcloud completion zsh)
 fi
-if [[ -x "kubectl" ]]
+if [[ -x "$(command -v kubectl)" ]]
 then
   source <(kubectl completion zsh)
 fi
-if [[ -x "jira" ]]
+if [[ -x "$(command -v jira)" ]]
 then
   source <(jira --completion-script-zsh)
 fi
