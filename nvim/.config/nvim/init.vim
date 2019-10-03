@@ -858,7 +858,7 @@ endif
 
 "BEGIN work
 "if s:has_plugin('fugitive-gitlab.vim')
-"  source fugitive-gitlab.vim
+"  source $HOME/.config/nvim/fugitive-gitlab.vim
 "endif
 "END work
 
