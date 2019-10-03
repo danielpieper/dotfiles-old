@@ -40,9 +40,6 @@ set nrformats-=octal
 set ttimeout
 set ttimeoutlen=100
 
-" detect .md as markdown instead of modula-2
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
 " Unix as standard file type
 set ffs=unix,dos,mac
 
@@ -68,9 +65,6 @@ if !empty(&viminfo)
 endif
 set sessionoptions-=options
 
-" stop highlighting of underscores in markdown files
-autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore "_"
-
 filetype plugin indent on
 
 if system('uname -s') == "Darwin\n"
@@ -84,14 +78,6 @@ endif
 
 " enable matchit (for matching tags with %)
 runtime macros/matchit.vim
-
-" javascript libraries syntax
-let g:used_javascript_libs = 'vue' " underscore,react,chai, more to see -> /othree/javascript-libraries-syntax.vim
-
-" vue
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-
-
 
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'

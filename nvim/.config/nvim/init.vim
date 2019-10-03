@@ -382,16 +382,6 @@ set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
 
-" update files if for example git branch changes
-set autoread
-au FocusGained,BufEnter * :checktime " https://vi.stackexchange.com/a/13092
-
-" Automatically make splits equal in size
-autocmd VimResized * wincmd =
-
-" open help in vertical split
-autocmd FileType help wincmd L
-
 " Remap annoying mistakes to something useful
 " TODO: check if i use this?
 cnoreabbrev W! w!
@@ -662,6 +652,82 @@ if s:has_plugin('vim-airline')
   " let g:airline#extensions#quickfix#quickfix_text = 'QF'
   " let g:airline#extensions#quickfix#location_text = 'LL'
 endif
+
+" Output the current syntax group
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+
+
+" Automatic commands
+" ------------------------------------------------------------------------------
+
+" Open help in a vertical split
+augroup vimrc-help
+  autocmd!
+  autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | setlocal relativenumber | endif
+augroup END
+
+augroup file-types
+  autocmd!
+
+  " Override some syntaxes so things look better
+  autocmd BufNewFile,BufRead *.html setlocal syntax=swig
+  autocmd BufNewFile,BufRead *.sss setlocal syntax=stylus
+  autocmd BufNewFile,BufRead *.snap,*.es6, setlocal filetype=javascript.jsx
+  autocmd BufNewFile,BufRead *stylelintrc,*eslintrc,*babelrc,*jshintrc setlocal syntax=json
+  autocmd BufNewFile,BufRead *.css,*.pcss setlocal syntax=scss filetype=scss
+  autocmd BufNewFile,BufRead *.cshtml setlocal filetype=cshtml
+  autocmd BufNewFile,BufRead *.vue setlocal filetype=vue.html.javascript.css
+
+  " Wrap text and turn on spell for markdown files
+  autocmd BufNewFile,BufRead *.md setlocal wrap linebreak spell filetype=markdown
+
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
+
+  " Use JS snippets in TS
+  autocmd FileType typescript,typescript.tsx call UltiSnips#AddFiletypes('javascript.typescript')
+augroup END
+
+" Periodically check for file changes
+set autoread
+augroup checktime
+  autocmd!
+  autocmd FocusGained,BufEnter * :silent! checktime " https://vi.stackexchange.com/a/13092
+  " autocmd CursorHold * silent! checktime
+augroup END
+
+" Resize splits when vim changes size (like with tmux opening/closing)
+augroup auto-resize
+  autocmd!
+  autocmd VimResized * wincmd =
+augroup END
+
+" Autocomplete
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup endif
+
+
+
+
+
+
+
+
+
+
+
 
 
 
