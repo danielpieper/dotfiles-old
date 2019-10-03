@@ -60,12 +60,12 @@ Plug 'tpope/vim-commentary' " for multiline became to comment lines
 " ------------------------------------------------------------------------------
 Plug 'https://github.com/chaoren/vim-wordmotion' " More useful word motions for Vim
 Plug 'https://github.com/wellle/targets.vim' " Vim plugin that provides additional text objects: ci' to (cut in single quote), also support (I l L a A n N) for (In Last last in  .. next Next)
-Plug 'https://github.com/wkana/vim-textobj-user' " create your own text objects without pain, eg. call textobj#user#plugin('datetime', { ...
-Plug 'https://github.com/wkana/vim-textobj-function' " Text objects for functions, build error ??!
-Plug 'https://github.com/wkana/vim-textobj-entire' " Text objects for functions, build error ??!
-Plug 'https://github.com/wkana/vim-textobj-line' " Text objects for functions, build error ??!
-Plug 'https://github.com/wkana/vim-textobj-fold' " provides text objects for fold , eg. yaz to yank arround fold
-Plug 'https://github.com/wkana/vim-textobj-indent' " Text objects for indented blocks of lines, eg. y- yank of blocks of lines
+Plug 'https://github.com/kana/vim-textobj-user' " create your own text objects without pain, eg. call textobj#user#plugin('datetime', { ...
+Plug 'https://github.com/kana/vim-textobj-function' " Text objects for functions, build error ??!
+Plug 'https://github.com/kana/vim-textobj-entire' " Text objects for functions, build error ??!
+Plug 'https://github.com/kana/vim-textobj-line' " Text objects for functions, build error ??!
+Plug 'https://github.com/kana/vim-textobj-fold' " provides text objects for fold , eg. yaz to yank arround fold
+Plug 'https://github.com/kana/vim-textobj-indent' " Text objects for indented blocks of lines, eg. y- yank of blocks of lines
 " Plug 'https://github.com/easymotion/vim-easymotion' " EasyMotion provides a much simpler way to use some motions in vim.
 
 
@@ -131,7 +131,7 @@ Plug 'https://github.com/tpope/vim-haml' " Better Scss highlighting than polyglo
 " JavaScript
 " ------------------------------------------------------------------------------
 Plug 'https://github.com/pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']} " Vastly improved Javascript indentation and syntax support in Vim.
-Plug 'https://github.com/mmoll/vim-node', {'for': ['javascript', 'javascript.jsx', 'json']} " gf to jump to source and module files, :Nedit {module_name} to edit the main file of a module
+Plug 'https://github.com/moll/vim-node', {'for': ['javascript', 'javascript.jsx', 'json']} " gf to jump to source and module files, :Nedit {module_name} to edit the main file of a module
 
 
 " Autocomplete & linting
@@ -395,10 +395,84 @@ cnoreabbrev Qa q
 cnoreabbrev Qall qall
 
 
+" Key mappings
+" ------------------------------------------------------------------------------
 
+" Save file
+nnoremap <silent><leader>w :silent wa<cr>
 
+" gf but in a vsplit
+" TODO: what does this do?
+nnoremap gv :vertical wincmd f<cr>
 
+" Force j and k to work on display lines
+" TODO: what does this do?
+nnoremap k gk
+nnoremap j gj
+vnoremap k gk
+vnoremap j gj
 
+" Disable arrow keys
+noremap <right> <Nop>
+noremap <left> <Nop>
+noremap <up> <Nop>
+noremap <down> <Nop>
+
+" Delete line but preserve the space
+nnoremap dD S<Esc>
+
+" Make `Y` work from the cursor to the end of line
+nnoremap Y y$
+
+" Reformat whole file and move back to original position
+nnoremap g= gg=G``
+
+" Automatically jump to end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" Split
+noremap <silent><leader>x :split<cr>
+noremap <silent><leader>v :vsplit<cr>
+
+" Switch buffers
+" TODO: this collides with high/low in file
+" nnoremap <silent>H :silent bp<CR>
+" nnoremap <silent>L :silent bn<CR>
+
+" Spellcheck
+nnoremap <F6> :setlocal spell!<cr>
+" TODO: check if i need this:
+" nnoremap <F6> :set hlsearch!<CR>
+
+" Clear search (highlight)
+nnoremap <silent> <F2> :noh<cr>
+
+" Automatically 'gv' (go to previously selected visual block)
+" after indenting or unindenting.
+vnoremap < <gv
+vnoremap > >gv
+
+" Press enter for newline without insert
+nnoremap <cr> o<esc>
+" but don't effect command line mode
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd CmdwinLeave * nnoremap <cr> o<esc>
+
+" Allow sourcing of vimrc
+nnoremap <leader>y :source $MYVIMRC<cr>
+
+if exists(':tnoremap')
+  " Allow movement seamlessly with terminals
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+endif
+
+"  Plugin config
+" ------------------------------------------------------------------------------
 
 source $HOME/.config/nvim/config/general.vimrc
 
