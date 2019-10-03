@@ -27,9 +27,6 @@ if has("autocmd")
 
   augroup END
 
-  " Automatically make splits equal in size
-  autocmd VimResized * wincmd =
-
 endif " has("autocmd")
 
 " tab stuff
@@ -42,10 +39,6 @@ set nrformats-=octal
 
 set ttimeout
 set ttimeoutlen=100
-
-" update files if for example git branch changes
-set autoread
-au FocusGained,BufEnter * :checktime " https://vi.stackexchange.com/a/13092
 
 " detect .md as markdown instead of modula-2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -80,9 +73,6 @@ autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore
 
 filetype plugin indent on
 
-" open help in vertical split
-autocmd FileType help wincmd L
-
 if system('uname -s') == "Darwin\n"
   " OSX
   let g:python3_host_prog = '/usr/local/bin/python3'
@@ -102,9 +92,6 @@ let g:used_javascript_libs = 'vue' " underscore,react,chai, more to see -> /othr
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 
-" buffer keys
-nnoremap <Leader>QQ :BufOnly<CR>
-
 
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -112,7 +99,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Function keys
 
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
-nnoremap <F7> :UndotreeToggle<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.

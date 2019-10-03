@@ -52,6 +52,7 @@ Plug 'https://github.com/sheerun/vim-polyglot' " A collection of language packs 
 " ------------------------------------------------------------------------------
 Plug 'tpope/vim-repeat' " Repeat.vim remaps . in a way that plugins can tap into it
 Plug 'tpope/vim-commentary' " for multiline became to comment lines
+Plug 'https://github.com/junegunn/goyo.vim' " Distraction-free writing in Vim.
 " Plug 'tpope/vim-speeddating' " a Ctrl-a/Ctrl-x command to increment / decrement a line of Date
 " Plug 'https://github.com/junegunn/vim-easy-align' " indent multi text ( easy align : so many feature )
 
@@ -381,6 +382,16 @@ set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
 
+" update files if for example git branch changes
+set autoread
+au FocusGained,BufEnter * :checktime " https://vi.stackexchange.com/a/13092
+
+" Automatically make splits equal in size
+autocmd VimResized * wincmd =
+
+" open help in vertical split
+autocmd FileType help wincmd L
+
 " Remap annoying mistakes to something useful
 " TODO: check if i use this?
 cnoreabbrev W! w!
@@ -474,10 +485,110 @@ endif
 "  Plugin config
 " ------------------------------------------------------------------------------
 
+if s:has_plugin('vim-textobj-entire')
+  let g:textobj_entire_no_default_key_mappings = 1
+  xmap aE <Plug>(textobj-entire-a)
+  omap aE <Plug>(textobj-entire-a)
+  xmap iE <Plug>(textobj-entire-i)
+  omap iE <Plug>(textobj-entire-i)
+endif
+
+if s:has_plugin('ultisnips')
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+  let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+endif
+
+if s:has_plugin('vim-easyclip')
+  let g:EasyClipUseSubstituteDefaults = 0
+  let g:EasyClipUsePasteDefaults = 0
+  nmap s <plug>SubstituteOverMotionMap
+  xmap s <plug>XEasyClipPaste
+  imap <c-v> <plug>EasyClipInsertModePaste
+  " Place a mark (m taken by easyclip)
+  nnoremap gm m
+endif
+
+if s:has_plugin('undotree')
+  nnoremap <F5> :UndotreeToggle<cr>
+  let g:undotree_SplitWidth = 45
+endif
+
+if s:has_plugin('vim-javascript')
+  let g:javascript_plugin_flow=1
+  let g:javascript_plugin_jsdoc=1
+endif
+
+if s:has_plugin('goyo.vim')
+  function! s:goyo_enter()
+    if executable('tmux') && strlen($TMUX)
+      silent !tmux set status off
+      silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    endif
+    set noshowmode
+    set noshowcmd
+    set norelativenumber
+    set scrolloff=999
+
+    autocmd InsertEnter * setlocal nonumber norelativenumber
+    autocmd InsertLeave * setlocal norelativenumber nonumber
+  endfunction
+
+  function! s:goyo_leave()
+    if executable('tmux') && strlen($TMUX)
+      silent !tmux set status on
+      silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    endif
+    set showcmd
+    set relativenumber
+    set scrolloff=3
+
+    autocmd InsertEnter * setlocal number norelativenumber nocursorline
+    autocmd InsertLeave * setlocal relativenumber cursorline
+  endfunction
+
+  autocmd! User GoyoEnter nested call <SID>goyo_enter()
+  autocmd! User GoyoLeave nested call <SID>goyo_leave()
+endif
+
+if s:has_plugin('vim-better-whitespace')
+  autocmd BufEnter * EnableStripWhitespaceOnSave
+  highlight ExtraWhitespace ctermbg=red guibg = #e06c75
+endif
+
+if s:has_plugin('vim-polyglot')
+  let g:polyglot_disabled = ['markdown', 'scss']
+  let g:vue_disable_pre_processors = 1
+  let g:jsx_ext_required = 0
+endif
+
+if s:has_plugin('vim-closetag')
+  let g:closetag_filenames = "*.html,*.js,*.jsx"
+  let g:closetag_close_shortcut = ''
+endif
+
+if s:has_plugin('vim-bbye')
+  nnoremap <leader>q :silent Bdelete<CR>
+  nnoremap <leader>Q :silent Bwipeout<CR>
+endif
+
+if s:has_plugin('vim-bufonly')
+  nnoremap <leader>QQ :BufOnly<cr>
+endif
+
+if s:has_plugin('gv.vim')
+  nnoremap <c-g> :GV!<cr>
+endif
+
+
+
+
+
+
 source $HOME/.config/nvim/config/general.vimrc
 
 source $HOME/.config/nvim/config/plugin/vdebug.vimrc
-source $HOME/.config/nvim/config/plugin/vim-bbye.vimrc
 source $HOME/.config/nvim/config/plugin/vim-airline.vimrc
 source $HOME/.config/nvim/config/plugin/coc.vimrc
 source $HOME/.config/nvim/config/plugin/ale.vimrc
