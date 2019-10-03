@@ -24,7 +24,6 @@ Plug 'https://github.com/shumphrey/fugitive-gitlab.vim' " An extension to fugiti
 Plug 'https://github.com/junegunn/gv.vim' " A git commit browser.
 
 " editing
-Plug 'https://github.com/jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'https://github.com/mhinz/vim-signify' " Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS).
 Plug 'https://github.com/junegunn/vim-easy-align' " indent multi text ( easy align : so many feature )
 Plug 'mbbill/undotree' " undo tree
