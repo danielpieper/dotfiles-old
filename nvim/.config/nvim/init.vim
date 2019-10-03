@@ -193,7 +193,7 @@ silent! colorscheme onedark
 let g:html_indent_tags='li\|p'
 
 " Set <space> to leader
-let mapleader=' '
+let mapleader=','
 let maplocalleader='\'
 
 " Turn off swapfiles
@@ -653,6 +653,23 @@ if s:has_plugin('vim-airline')
   " let g:airline#extensions#quickfix#location_text = 'LL'
 endif
 
+if s:has_plugin('vim-commentary')
+  nnoremap <c-_> :Commentary<cr>
+  vnoremap <c-_> :Commentary<cr>
+  " Terraform commentary
+  autocmd FileType terraform setlocal commentstring=#%s
+endif
+
+if s:has_plugin('nerdtree')
+  nnoremap <silent><f3> :NERDTreeToggle<cr>
+  nnoremap <silent><leader><f3> :NERDTreeFind<cr>
+  let g:NERDTreeWinPos = 'right'
+  let g:NERDTreeQuitOnOpen = 1
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeMinimalUI = 1
+endif
+
+
 " Output the current syntax group
 nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -738,13 +755,11 @@ source $HOME/.config/nvim/config/plugin/vdebug.vimrc
 source $HOME/.config/nvim/config/plugin/coc.vimrc
 source $HOME/.config/nvim/config/plugin/ale.vimrc
 source $HOME/.config/nvim/config/plugin/colorizer.vimrc
-source $HOME/.config/nvim/config/plugin/nerdtree.vimrc
 source $HOME/.config/nvim/config/plugin/editorconfig-vim.vimrc
 source $HOME/.config/nvim/config/plugin/delimitmate.vimrc
 source $HOME/.config/nvim/config/plugin/vim-startify.vimrc
 source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
 source $HOME/.config/nvim/config/plugin/vim-test.vimrc
-source $HOME/.config/nvim/config/plugin/vim-commentary.vimrc
 source $HOME/.config/nvim/config/plugin/vim-easy-align.vimrc
 source $HOME/.config/nvim/config/plugin/vim-fugitive.vimrc
 source $HOME/.config/nvim/config/plugin/devdocs.vimrc
