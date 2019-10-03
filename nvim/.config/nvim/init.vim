@@ -174,8 +174,225 @@ endfunction
 "  General config
 " ------------------------------------------------------------------------------
 
+if s:has_plugin('onedark.vim')
+  let g:onedark_color_overrides = {
+  \ "black": {"gui": "#1D1F21", "cterm": "235", "cterm16": "0" },
+  \ "cursor_grey": { "gui": "#1f2123", "cterm": "170", "cterm16": "5" },
+  \}
+end
+set background=dark
+" TODO: check if required
+" make background transparent
+hi Normal ctermbg=NONE
+hi EndOfBuffer ctermbg=NONE
+hi LineNr ctermbg=234
+silent! colorscheme onedark
 
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags='li\|p'
 
+" Set <space> to leader
+let mapleader=' '
+let maplocalleader='\'
+
+" Turn off swapfiles
+set noswapfile
+set nobackup
+set nowb
+
+" Allow editing of binary files
+" Must be set before expandtab
+" http://stackoverflow.com/a/26901774
+set binary
+
+" Enable term 24 bit colour
+set termguicolors
+
+" Make it obvious where 80 characters is
+set textwidth=80
+
+" Use ``indent`` based folding
+set foldmethod=indent
+" Disable all folds on file open until `zc` or `zM` etc is used
+set nofoldenable
+
+" With :set hidden, opening a new file when the current buffer has unsaved
+" changes causes files to be hidden instead of closed
+set hidden
+
+" Allow tab names to be remembered in sessions
+set sessionoptions+=tabpages,globals
+
+" Briefly move the cursor to the matching brace
+set showmatch
+
+" Lazyredraw attempts to solve Vim lag by reducing the amount of
+" processing required. When enabled, any action that is not typed
+" will not cause the screen to redraw
+set lazyredraw
+
+" Don't display the current mode (Insert, Visual, Replace)
+" in the status line. This info is already shown in the
+" Airline status bar.
+set noshowmode
+
+" Stop vim trying to syntax highlight long lines, typically found in minified
+" files. This greatly reduces lag yet is still wide enough for large displays
+set synmaxcol=500
+
+" Highlight current line
+set cursorline
+
+" Indent using two spaces.
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+
+" Smoother scrolling when moving horizontally
+set sidescroll=1
+
+" Use spaces, not tabs
+set expandtab
+
+" Don't scan included files. The .tags file is more performant.
+set complete-=i
+set complete+=kspell " TODO: what is kspell?
+
+" Prevent autocomplete options opening in scratchpad
+set completeopt-=preview
+
+" This is set low so that gitgutter updates reasonably quickly
+" https://github.com/airblade/vim-gitgutter#when-are-the-signs-updated
+set updatetime=300 " TODO: is this required as i don't use gitgutter?
+
+" Don't wrap lines
+set nowrap
+
+" Keep the cursor in the same place when switching buffers
+set nostartofline
+
+" Show col and line position in the statusbar
+set ruler
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Ignore case of searches
+set ignorecase
+
+" If a pattern contains an uppercase letter
+" it is case sensitive, otherwise, it is not
+set smartcase
+
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
+
+" Spell check
+set spelllang=en
+
+" Where it should get the dictionary files
+let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
+
+" For autocompletion, complete as much as you can.
+set wildmode=list:longest,full
+
+" don't add extra space after ., !, etc. when joining
+set nojoinspaces
+
+" Eliminate delay when switching modes
+set ttimeoutlen=0
+
+" Enable mouse with tmux
+set mouse=a
+
+" Auto save changes before switching buffer
+set autowrite
+
+" Add the g flag to search/replace by default
+set gdefault
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.config/nvim/backups
+set directory=.,$TEMP " Stop the swp file warning
+
+if has("persistent_undo")
+  set undodir=~/.config/nvim/undo
+  set undofile
+  set undolevels=1000
+  set undoreload=10000
+endif
+
+" Always show sign column for git icons
+set signcolumn=yes
+
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
+
+" Respect modeline in files
+set modeline
+set modelines=4
+
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,nbsp:_
+set list
+
+" Disable error bells
+set noerrorbells
+
+" Don't show the intro message when starting Vim
+" Also suppress several 'Press Enter to continue messages' especially
+" with FZF
+set shortmess=aoOtIWcFs
+
+" Show the current mode
+set title
+
+" Show the (partial) command as it’s being typed
+set showcmd
+
+" Line numbers
+set number
+set relativenumber
+
+" Path and file extensions to look for when using `gf`
+set suffixesadd+=.css,index.css,.js,.jsx,.scss " TODO: what is this doing?
+set path+=.,src " TODO: what is this for?
+
+" https://damien.pobel.fr/post/configure-neovim-vim-gf-javascript-import/
+function! LoadMainNodeModule(fname)
+  let nodeModules = "./node_modules/"
+  let packageJsonPath = nodeModules . a:fname . "/package.json"
+  if filereadable(packageJsonPath)
+    return nodeModules . a:fname . "/" . json_decode(join(readfile(packageJsonPath))).main
+  else
+    return nodeModules . a:fname
+  endif
+endfunction
+
+set includeexpr=LoadMainNodeModule(v:fname)
+
+" Start scrolling before cursor gets to the edge
+set scrolloff=3
+set sidescrolloff=15
+set sidescroll=1
+
+" Remap annoying mistakes to something useful
+" TODO: check if i use this?
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Qa q
+cnoreabbrev Qall qall
 
 
 
@@ -184,11 +401,9 @@ endfunction
 
 
 source $HOME/.config/nvim/config/general.vimrc
-source $HOME/.config/nvim/config/keys.vimrc
 
 source $HOME/.config/nvim/config/plugin/vdebug.vimrc
 source $HOME/.config/nvim/config/plugin/vim-bbye.vimrc
-source $HOME/.config/nvim/config/plugin/onedark.vimrc
 source $HOME/.config/nvim/config/plugin/vim-airline.vimrc
 source $HOME/.config/nvim/config/plugin/coc.vimrc
 source $HOME/.config/nvim/config/plugin/ale.vimrc

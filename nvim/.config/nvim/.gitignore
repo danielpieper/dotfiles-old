@@ -1,5 +1,7 @@
 backup/
 plugged/
 undodir/
+undo/
+backups/
 fonts/
 .netrwhist
