@@ -628,6 +628,40 @@ if s:has_plugin('fzf.vim')
     \ 'header':  ['fg', 'Comment'] }
 endif
 
+if s:has_plugin('vim-airline')
+  if s:has_plugin('onedark.vim')
+    let g:airline_theme = 'onedark'
+  endif
+  if s:has_plugin('material.vim')
+    let g:airline_theme = 'material'
+  endif
+  let g:airline#extensions#branch#enabled = 1
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tmuxline#enabled = 0
+  let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+  let g:airline#extensions#tabline#buffers_label = ''
+  let g:airline#extensions#tabline#fnamemod = ':t' " Show the filename
+  let g:airline#extensions#tabline#fnamecollapse = 0
+  let g:airline#extensions#tabline#show_tab_nr = 0
+  let g:airline#extensions#tabline#buffer_nr_show = 0
+  let g:airline#extensions#tabline#show_close_button = 0
+  let g:airline#extensions#coc#enabled = 1
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline#extensions#default#layout = [
+        \ [ 'a', 'c' ],
+        \ [ 'x', 'error', 'warning' ]
+        \ ]
+
+  " let g:airline_symbols.linenr = ''
+  " let g:airline_symbols.paste = 'ρ'
+  " let g:airline_symbols.readonly = ''
+
+  " let g:airline#extensions#quickfix#quickfix_text = 'QF'
+  " let g:airline#extensions#quickfix#location_text = 'LL'
+endif
 
 
 
@@ -635,7 +669,6 @@ endif
 source $HOME/.config/nvim/config/general.vimrc
 
 source $HOME/.config/nvim/config/plugin/vdebug.vimrc
-source $HOME/.config/nvim/config/plugin/vim-airline.vimrc
 source $HOME/.config/nvim/config/plugin/coc.vimrc
 source $HOME/.config/nvim/config/plugin/ale.vimrc
 source $HOME/.config/nvim/config/plugin/colorizer.vimrc
