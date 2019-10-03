@@ -581,6 +581,52 @@ if s:has_plugin('gv.vim')
   nnoremap <c-g> :GV!<cr>
 endif
 
+if s:has_plugin('fzf.vim')
+  let g:fzf_height = '40%'
+  let g:fzf_commits_log_options = '--color --graph --pretty=format:"%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(bold blue)(%cr) %Cred<%an>%Creset" --abbrev-commit'
+
+  nnoremap <a-p> :Files<cr>
+  nnoremap <c-p> :GFiles<cr>
+  nnoremap <c-space> :Buffers<cr>
+  nnoremap <c-t> :Lines<cr>
+  nnoremap <c-f> :Rg!<cr>
+  nnoremap <c-i> :Rg<space>
+  nnoremap <silent> <BS> :History:<cr>
+
+  " Allow options to be passed to FZF :Ag
+  " Probably quite hacky until a better solution appears
+  " https://github.com/junegunn/fzf.vim/issues/92#issuecomment-191248596
+  function! s:ag_with_opts(arg, bang)
+    let tokens  = split(a:arg)
+    let ag_opts = join(filter(copy(tokens), 'v:val =~ "^-"'))
+    let query   = join(filter(copy(tokens), 'v:val !~ "^-"'))
+    call fzf#vim#ag(query, '--hidden --ignore .git', a:bang ? {} : {'down': '40%'})
+  endfunction
+
+  command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --pretty --no-heading '.shellescape(<q-args>), 1, <bang>0)
+  command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+  command! -bang -nargs=? -complete=dir GFiles call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+  if has('autocmd')
+    autocmd VimEnter * command! -nargs=* -bang Ag call s:ag_with_opts(<q-args>, <bang>0)
+  endif
+
+" Customize fzf colors to match your color scheme
+  let g:fzf_colors =
+  \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Boolean'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
+endif
 
 
 
@@ -601,7 +647,6 @@ source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
 source $HOME/.config/nvim/config/plugin/vim-test.vimrc
 source $HOME/.config/nvim/config/plugin/vim-commentary.vimrc
 source $HOME/.config/nvim/config/plugin/vim-easy-align.vimrc
-source $HOME/.config/nvim/config/plugin/fzf.vimrc
 source $HOME/.config/nvim/config/plugin/vim-fugitive.vimrc
 source $HOME/.config/nvim/config/plugin/devdocs.vimrc
 "BEGIN work
