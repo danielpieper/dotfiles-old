@@ -622,9 +622,6 @@ if s:has_plugin('vim-airline')
   if s:has_plugin('onedark.vim')
     let g:airline_theme = 'onedark'
   endif
-  if s:has_plugin('material.vim')
-    let g:airline_theme = 'material'
-  endif
   let g:airline#extensions#branch#enabled = 1
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tmuxline#enabled = 0
@@ -640,17 +637,25 @@ if s:has_plugin('vim-airline')
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
-  let g:airline#extensions#default#layout = [
-        \ [ 'a', 'c' ],
-        \ [ 'x', 'error', 'warning' ]
-        \ ]
+  let g:airline_powerline_fonts = 1
 
-  " let g:airline_symbols.linenr = ''
-  " let g:airline_symbols.paste = 'ρ'
-  " let g:airline_symbols.readonly = ''
+  let g:airline#extensions#quickfix#quickfix_text = 'QF'
+  let g:airline#extensions#quickfix#location_text = 'LL'
 
-  " let g:airline#extensions#quickfix#quickfix_text = 'QF'
-  " let g:airline#extensions#quickfix#location_text = 'LL'
+  " disable unused extensions (performance)
+  let g:airline#extensions#bufferline#enabled = 0
+  let g:airline#extensions#capslock#enabled   = 0
+  let g:airline#extensions#csv#enabled        = 0
+  let g:airline#extensions#ctrlspace#enabled  = 0
+  let g:airline#extensions#eclim#enabled      = 0
+  let g:airline#extensions#hunks#enabled      = 0
+  let g:airline#extensions#nrrwrgn#enabled    = 0
+  let g:airline#extensions#promptline#enabled = 0
+  let g:airline#extensions#syntastic#enabled  = 0
+  let g:airline#extensions#taboo#enabled      = 0
+  let g:airline#extensions#tagbar#enabled     = 0
+  let g:airline#extensions#virtualenv#enabled = 0
+  let g:airline#extensions#whitespace#enabled = 0
 endif
 
 if s:has_plugin('vim-commentary')
