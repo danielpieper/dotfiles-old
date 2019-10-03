@@ -5,3 +5,4 @@ undo/
 backups/
 fonts/
 .netrwhist
+fugitive-gitlab.vim

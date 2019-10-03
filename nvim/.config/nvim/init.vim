@@ -779,6 +779,88 @@ if s:has_plugin('ale')
   nnoremap <Leader>ff :ALEFix<CR>
 endif
 
+if s:has_plugin('colorizer')
+  " disable colorizer at startup
+  let g:colorizer_startup = 0
+  let g:colorizer_nomap = 1
+endif
+
+if s:has_plugin('vim-startify')
+  let g:startify_session_dir = '~/.config/nvim/session'
+  let g:startify_session_autoload = 1
+  let g:startify_session_delete_buffers = 1
+  let g:startify_change_to_vcs_root = 1
+  let g:startify_session_persistence = 1
+  let g:startify_change_to_dir = 1
+
+  let g:startify_lists = [
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
+endif
+
+if s:has_plugin('vim-test')
+  nmap <silent> <leader>tt :TestNearest<CR>
+  nmap <silent> <leader>tf :TestFile<CR>
+  nmap <silent> <leader>ts :TestSuite<CR>
+  nmap <silent> <leader>tl :TestLast<CR>
+  nmap <silent> <leader>tv :TestVisit<CR>
+
+  function! PersonioTransform(cmd) abort
+    let pod = 'kubectl get pods --selector="app.kubernetes.io/name=web" -o name'
+    return 'kubectl exec $('.pod.') -c fpm-ssh -- '.a:cmd
+  endfunction
+
+  function! VagrantTransform(cmd) abort
+    let vagrant_project = get(matchlist(s:cat('Vagrantfile'), '\vconfig\.vm.synced_folder ["''].+[''"], ["''](.+)[''"]'), 1)
+    return 'vagrant ssh --command '.shellescape('cd '.vagrant_project.'; '.a:cmd)
+  endfunction
+
+  let g:test#custom_transformations = {'personio': function('PersonioTransform'), 'vagrant': function('VagrantTransform')}
+  let g:test#transformation = 'personio'
+  " make test commands execute using dispatch.vim
+  let test#strategy = "dispatch"
+endif
+
+if s:has_plugin('vim-devicons')
+  " after a re-source, fix syntax matching issues (concealing brackets):
+  if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+  endif
+endif
+
+if s:has_plugin('devdocs.vim')
+  nmap K <Plug>(devdocs-under-cursor)
+endif
+
+if s:has_plugin('editorconfig-vim')
+  let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+endif
+
+if s:has_plugin('vdebug')
+  let g:vdebug_keymap = {
+        \ "run" : "<F12>",
+        \ "run_to_cursor" : "<F9>",
+        \ "step_over" : "<F2>",
+        \ "step_into" : "<F3>",
+        \ "step_out" : "<F4>",
+        \ "close" : "<F6>",
+        \ "detach" : "<F7>",
+        \ "set_breakpoint" : "<Leader>bb",
+        \ "get_context" : "<F10>",
+        \ "eval_under_cursor" : "<F11>",
+        \ "eval_visual" : "<Leader>e",
+        \ }
+endif
+
+"BEGIN work
+"if s:has_plugin('fugitive-gitlab.vim')
+"  source fugitive-gitlab.vim
+"endif
+"END work
 
 " Output the current syntax group
 nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
@@ -844,33 +926,3 @@ augroup omnifuncs
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-source $HOME/.config/nvim/config/general.vimrc
-
-source $HOME/.config/nvim/config/plugin/vdebug.vimrc
-source $HOME/.config/nvim/config/plugin/colorizer.vimrc
-source $HOME/.config/nvim/config/plugin/editorconfig-vim.vimrc
-source $HOME/.config/nvim/config/plugin/delimitmate.vimrc
-source $HOME/.config/nvim/config/plugin/vim-startify.vimrc
-source $HOME/.config/nvim/config/plugin/vim-devicons.vimrc
-source $HOME/.config/nvim/config/plugin/vim-test.vimrc
-source $HOME/.config/nvim/config/plugin/vim-easy-align.vimrc
-source $HOME/.config/nvim/config/plugin/vim-fugitive.vimrc
-source $HOME/.config/nvim/config/plugin/devdocs.vimrc
-"BEGIN work
-"source $HOME/.config/nvim/config/plugin/fugitive-gitlab.vimrc
-"END work
