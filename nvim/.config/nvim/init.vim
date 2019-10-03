@@ -669,6 +669,116 @@ if s:has_plugin('nerdtree')
   let g:NERDTreeMinimalUI = 1
 endif
 
+if s:has_plugin('coc.nvim')
+  let g:coc_global_extensions = [
+        \ 'coc-tabnine',
+        \ 'coc-json',
+        \ 'coc-html',
+        \ 'coc-css',
+        \ 'coc-phpls',
+        \ 'coc-yaml',
+        \ 'coc-snippets',
+        \ 'coc-gocode',
+        \ 'coc-pairs',
+        \ 'coc-tsserver',
+        \ ]
+  " TODO: check if coc extensions are used:
+        " \ 'coc-lists',
+        " \ 'coc-project',
+        " \ 'coc-highlight',
+        " \ 'coc-yank',
+        " \ 'coc-git',
+        " \ 'coc-python',
+        " \ 'coc-tslint-plugin',
+        " \ ]
+  " Remap keys for gotos
+  nmap <silent> <leader>gd <Plug>(coc-definition)
+  nmap <silent> <leader>gt <Plug>(coc-type-definition)
+  nmap <silent> <leader>gi <Plug>(coc-implementation)
+  nmap <silent> <leader>gv :vsplit<cr> <Plug>(coc-implementation)
+  nmap <silent> <leader>gr <Plug>(coc-references)
+  nmap <silent> <leader>rr <Plug>(coc-rename)
+  nmap <silent> <leader>gl <Plug>(coc-codelens-action)
+  nmap <silent> <leader>ga <Plug>(coc-codeaction)
+
+  " Use `[c` and `]c` to navigate diagnostics
+  nmap <silent> [c <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+  hi CocCodeLens guifg=#3a445e
+
+  " Remap for rename current word
+  nmap <leader>rn <Plug>(coc-rename)
+
+  " Use <c-space> to trigger completion.
+  inoremap <silent><expr> <c-space> coc#refresh()
+
+  let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+  let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+
+  " nmap <silent> <leader>p :Prettier<cr>
+  " command! -nargs=0 Prettier :CocCommand prettier.formatFile
+  " nmap <silent> <leader>uf :CocList snippets<cr>
+
+  " Use tab for trigger completion with characters ahead and navigate.
+  " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+  inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+
+  let g:coc_snippet_next = '<tab>'
+
+  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+  " Coc only does snippet and additional edit on confirm.
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+  " documentation popup
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+  function! s:show_documentation()
+    if &filetype == 'vim'
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
+endif
+
+if s:has_plugin('ale')
+  let g:ale_completion_enabled = 0
+  let g:ale_php_phpcs_standard = 'PSR12'
+  let g:ale_php_phpmd_ruleset = 'phpmd.xml'
+  let g:ale_lint_on_text_changed = 'never'
+  let g:ale_lint_on_enter = 1
+  let g:ale_lint_on_save = 1
+  let g:ale_lint_on_filetype_changed = 1
+  let g:ale_lint_on_insert_leave = 0
+  let g:ale_disable_lsp = 1
+  let g:ale_maximum_file_size = 80000 " 80kb?
+  let g:ale_linters_explicit = 1
+  let g:ale_fix_on_save=0
+  let g:ale_linters = {
+        \ 'php': ['phpcs', 'phpmd'],
+        \ 'go': ['gopls', 'gofmt', 'golint'],
+        \ 'sh': ['shell'],
+        \ 'js': ['eslint'],
+        \ 'jsx': ['eslint'],
+        \}
+  let g:ale_fixers = {
+        \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+        \ 'php': ['php_cs_fixer'],
+        \ }
+
+  nnoremap <Leader>ff :ALEFix<CR>
+endif
+
 
 " Output the current syntax group
 nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
@@ -752,8 +862,6 @@ augroup endif
 source $HOME/.config/nvim/config/general.vimrc
 
 source $HOME/.config/nvim/config/plugin/vdebug.vimrc
-source $HOME/.config/nvim/config/plugin/coc.vimrc
-source $HOME/.config/nvim/config/plugin/ale.vimrc
 source $HOME/.config/nvim/config/plugin/colorizer.vimrc
 source $HOME/.config/nvim/config/plugin/editorconfig-vim.vimrc
 source $HOME/.config/nvim/config/plugin/delimitmate.vimrc
