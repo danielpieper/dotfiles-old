@@ -155,7 +155,7 @@ Plug 'https://github.com/vim-vdebug/vdebug' " Multi-language DBGP debugger clien
 
 " Golang
 " ------------------------------------------------------------------------------
-Plug 'https://github.com/fatih/vim-go' " Go development plugin for Vim
+" Plug 'https://github.com/fatih/vim-go' " Go development plugin for Vim
 
 
 " Terraform
@@ -210,7 +210,7 @@ set binary
 set termguicolors
 
 " Make it obvious where 80 characters is
-set textwidth=80
+" set textwidth=80
 
 " Use ``indent`` based folding
 set foldmethod=indent
@@ -493,9 +493,13 @@ endif
 if s:has_plugin('vim-easyclip')
   let g:EasyClipUseSubstituteDefaults = 0
   let g:EasyClipUsePasteDefaults = 0
+  let g:EasyClipAutoFormat = 1
+  " nmap <c-y> <plug>EasyClipSwapPasteForward
+  " nmap <c-h> <plug>EasyClipSwapPasteBackwards
   nmap s <plug>SubstituteOverMotionMap
   xmap s <plug>XEasyClipPaste
   imap <c-v> <plug>EasyClipInsertModePaste
+  nmap M <Plug>MoveMotionEndOfLinePlug
   " Place a mark (m taken by easyclip)
   nnoremap gm m
 endif
@@ -579,8 +583,8 @@ if s:has_plugin('fzf.vim')
   nnoremap <c-p> :GFiles<cr>
   nnoremap <c-space> :Buffers<cr>
   nnoremap <c-t> :Lines<cr>
-  nnoremap <c-f> :Rg!<cr>
-  nnoremap <c-i> :Rg<space>
+  nnoremap <c-i> :Rg!<cr>
+  nnoremap <c-f> :Rg<space>
   nnoremap <silent> <BS> :History:<cr>
 
   " Allow options to be passed to FZF :Ag
@@ -637,7 +641,14 @@ if s:has_plugin('vim-airline')
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
-  let g:airline_powerline_fonts = 1
+
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  let g:airline_symbols.linenr = ''
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.readonly = ''
 
   let g:airline#extensions#quickfix#quickfix_text = 'QF'
   let g:airline#extensions#quickfix#location_text = 'LL'
@@ -683,7 +694,7 @@ if s:has_plugin('coc.nvim')
         \ 'coc-phpls',
         \ 'coc-yaml',
         \ 'coc-snippets',
-        \ 'coc-gocode',
+        \ 'coc-go',
         \ 'coc-pairs',
         \ 'coc-tsserver',
         \ ]
