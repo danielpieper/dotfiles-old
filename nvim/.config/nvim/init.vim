@@ -400,7 +400,7 @@ cnoreabbrev Qall qall
 " ------------------------------------------------------------------------------
 
 " Save file
-nnoremap <silent><leader>w :silent wa<cr>
+nnoremap <silent><leader><cr> :silent wa<cr>
 
 " gf but in a vsplit
 " TODO: what does this do?
@@ -583,7 +583,6 @@ if s:has_plugin('fzf.vim')
   nnoremap <c-p> :GFiles<cr>
   nnoremap <c-space> :Buffers<cr>
   nnoremap <c-t> :Lines<cr>
-  nnoremap <c-i> :Rg!<cr>
   nnoremap <c-f> :Rg<space>
   nnoremap <silent> <BS> :History:<cr>
 
@@ -870,6 +869,10 @@ if s:has_plugin('vdebug')
         \ "eval_under_cursor" : "<F11>",
         \ "eval_visual" : "<Leader>e",
         \ }
+endif
+
+if s:has_plugin('vim-wordmotion')
+  let g:wordmotion_prefix = '<Leader>'
 endif
 
 "BEGIN work
