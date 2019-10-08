@@ -9,3 +9,4 @@ _ide_helper_models.php
 .projections.json
 .php_cs.cache
 .jira.d
+.DS_Store
