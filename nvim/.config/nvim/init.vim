@@ -720,6 +720,26 @@ if s:has_plugin('coc.nvim')
   nmap <silent> [c <Plug>(coc-diagnostic-prev)
   nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
+  " Using CocList
+  nnoremap <silent> <space>l  :<C-u>CocList<cr>
+  " Show all diagnostics
+  " nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
+  " Manage extensions
+  " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+  " Show commands
+  " nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+  " Find symbol of current document
+  nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+  " Search workspace symbols
+  " nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+  " Do default action for next item.
+  " nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+  " Do default action for previous item.
+  " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+  " Resume latest coc list
+  " nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
+  " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
   hi CocCodeLens guifg=#3a445e
 
   " Remap for rename current word
@@ -848,7 +868,7 @@ if s:has_plugin('vim-devicons')
 endif
 
 if s:has_plugin('devdocs.vim')
-  nmap K <Plug>(devdocs-under-cursor)
+  nmap <leader>K <Plug>(devdocs-under-cursor)
 endif
 
 if s:has_plugin('editorconfig-vim')
