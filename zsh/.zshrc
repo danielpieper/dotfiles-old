@@ -19,7 +19,7 @@ export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin:~/go/bin:~/.gem/ruby/2.6.0
 # BEGIN work
 #export PATH="/usr/local/opt/node@8/bin:/usr/local/sbin:$PATH"
 #alias pc="~/projects/personio/perctl"
-#alias wl="nvim ~/Documents/worklog.txt"
+#alias wl="nvim ~/Documents/worklog.md"
 #
 # END work
 # BEGIN laptop

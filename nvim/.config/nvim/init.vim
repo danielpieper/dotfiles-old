@@ -857,18 +857,30 @@ endif
 
 if s:has_plugin('vdebug')
   let g:vdebug_keymap = {
-        \ "run" : "<F12>",
-        \ "run_to_cursor" : "<F9>",
-        \ "step_over" : "<F2>",
-        \ "step_into" : "<F3>",
-        \ "step_out" : "<F4>",
-        \ "close" : "<F6>",
-        \ "detach" : "<F7>",
-        \ "set_breakpoint" : "<Leader>bb",
-        \ "get_context" : "<F10>",
-        \ "eval_under_cursor" : "<F11>",
-        \ "eval_visual" : "<Leader>e",
+        \ "run" : "<leader><F5>",
+        \ "run_to_cursor" : "<leader><F9>",
+        \ "step_over" : "<leader><F2>",
+        \ "step_into" : "<leader><F3>",
+        \ "step_out" : "<leader><F4>",
+        \ "close" : "<leader><F6>",
+        \ "detach" : "<leader><F7>",
+        \ "set_breakpoint" : "<leader>bb",
+        \ "get_context" : "<leader><F11>",
+        \ "eval_under_cursor" : "<leader><F12>",
+        \ "eval_visual" : "<leader>e",
         \ }
+
+    if !exists('g:vdebug_options')
+      let g:vdebug_options = {}
+    endif
+    " let g:vdebug_options.ide_key = "xdebug"
+    let g:vdebug_options.path_maps = {
+          \ "/var/www/html": "/Users/daniel.pieper/projects/personio"
+          \ }
+    hi default DbgCurrentLine term=reverse ctermfg=White ctermbg=Red guifg=#282c34 guibg=#be5046
+    hi default DbgCurrentSign term=reverse ctermfg=White ctermbg=Red guifg=#282c34 guibg=#be5046
+    hi default DbgBreakptLine term=reverse ctermfg=White ctermbg=Green guifg=#282c34 guibg=#98c379
+    hi default DbgBreakptSign term=reverse ctermfg=White ctermbg=Green guifg=#282c34 guibg=#98c379
 endif
 
 if s:has_plugin('vim-wordmotion')
