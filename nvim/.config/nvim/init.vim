@@ -549,6 +549,8 @@ endif
 if s:has_plugin('vim-better-whitespace')
   autocmd BufEnter * EnableStripWhitespaceOnSave
   highlight ExtraWhitespace ctermbg=red guibg = #e06c75
+  " let g:strip_only_modified_lines=1
+  let g:strip_whitespace_confirm=0
 endif
 
 if s:has_plugin('vim-polyglot')
