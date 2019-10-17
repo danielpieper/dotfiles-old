@@ -86,7 +86,7 @@ Plug 'tpope/vim-surround' " ysiw' | ds{ds)  provides mappings to easily delete, 
 
 " Copy/Paste behaviour
 " ------------------------------------------------------------------------------
-Plug 'https://github.com/svermeulen/vim-easyclip' " Stop everything saving to a register and instead rely on just `m` for cut
+" Plug 'https://github.com/svermeulen/vim-easyclip' " Stop everything saving to a register and instead rely on just `m` for cut
 Plug 'https://github.com/ConradIrwin/vim-bracketed-paste' " Improve pasting code from the clipboard
 
 
@@ -585,7 +585,7 @@ if s:has_plugin('fzf.vim')
   nnoremap <c-p> :GFiles<cr>
   nnoremap <c-space> :Buffers<cr>
   nnoremap <c-t> :Lines<cr>
-  nnoremap <c-f> :Rg<space>
+  nnoremap <c-f> :Ag<space>
   nnoremap <silent> <BS> :History:<cr>
 
   " Allow options to be passed to FZF :Ag
@@ -627,9 +627,7 @@ if s:has_plugin('vim-airline')
   if s:has_plugin('onedark.vim')
     let g:airline_theme = 'onedark'
   endif
-  let g:airline#extensions#branch#enabled = 1
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tmuxline#enabled = 0
+
   let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
   let g:airline#extensions#tabline#buffers_label = ''
   let g:airline#extensions#tabline#fnamemod = ':t' " Show the filename
@@ -637,12 +635,13 @@ if s:has_plugin('vim-airline')
   let g:airline#extensions#tabline#show_tab_nr = 0
   let g:airline#extensions#tabline#buffer_nr_show = 0
   let g:airline#extensions#tabline#show_close_button = 0
-  let g:airline#extensions#coc#enabled = 1
+
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
 
+  let g:airline_powerline_fonts = 1
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
