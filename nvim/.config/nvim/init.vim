@@ -595,7 +595,7 @@ if s:has_plugin('fzf.vim')
     let tokens  = split(a:arg)
     let ag_opts = join(filter(copy(tokens), 'v:val =~ "^-"'))
     let query   = join(filter(copy(tokens), 'v:val !~ "^-"'))
-    call fzf#vim#ag(query, '--hidden --ignore .git', a:bang ? {} : {'down': '40%'})
+    call fzf#vim#ag(query, '--hidden --ignore .git', a:bang ? {} : {'down': '40%', 'options': '--layout=default'})
   endfunction
 
   command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --pretty --no-heading '.shellescape(<q-args>), 1, <bang>0)
@@ -605,6 +605,30 @@ if s:has_plugin('fzf.vim')
   if has('autocmd')
     autocmd VimEnter * command! -nargs=* -bang Ag call s:ag_with_opts(<q-args>, <bang>0)
   endif
+
+  let $FZF_DEFAULT_OPTS='--layout=reverse'
+  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+
+  function! FloatingFZF()
+    let buf = nvim_create_buf(v:false, v:true)
+    call setbufvar(buf, '&signcolumn', 'no')
+
+    let height = float2nr(40)
+    let width = float2nr(160)
+    let horizontal = float2nr((&columns - width) / 2)
+    let vertical = 5
+
+    let opts = {
+          \ 'relative': 'editor',
+          \ 'row': vertical,
+          \ 'col': horizontal,
+          \ 'width': width,
+          \ 'height': height,
+          \ 'style': 'minimal'
+          \ }
+
+    call nvim_open_win(buf, v:true, opts)
+  endfunction
 
 " Customize fzf colors to match your color scheme
   let g:fzf_colors =
