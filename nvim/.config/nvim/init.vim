@@ -660,10 +660,10 @@ if s:has_plugin('vim-airline')
   let g:airline#extensions#tabline#buffer_nr_show = 0
   let g:airline#extensions#tabline#show_close_button = 0
 
-  " let g:airline_left_sep = ''
-  " let g:airline_left_alt_sep = ''
-  " let g:airline_right_sep = ''
-  " let g:airline_right_alt_sep = ''
+  let g:airline_left_sep = "\uE0B4"
+  let g:airline_left_alt_sep = "\uE0B5"
+  let g:airline_right_sep = "\uE0B6"
+  let g:airline_right_alt_sep = "\uE0B7"
 
   let g:airline_powerline_fonts = 1
   if !exists('g:airline_symbols')
