@@ -10,3 +10,4 @@ _ide_helper_models.php
 .php_cs.cache
 .jira.d
 .DS_Store
+.vim

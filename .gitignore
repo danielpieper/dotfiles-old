@@ -6,4 +6,5 @@ composer/.composer/*
 kitty/.config/kitty/cached.json
 fonts/.fonts/.uuid
 nvim/.config/nvim/autoload/plug.vim.old
+nvim/.config/nvim/coc-settings.json
 .DS_Store

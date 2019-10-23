@@ -711,7 +711,6 @@ endif
 
 if s:has_plugin('coc.nvim')
   let g:coc_global_extensions = [
-        \ 'coc-tabnine',
         \ 'coc-json',
         \ 'coc-html',
         \ 'coc-css',
@@ -721,8 +720,10 @@ if s:has_plugin('coc.nvim')
         \ 'coc-go',
         \ 'coc-pairs',
         \ 'coc-tsserver',
+        \ 'coc-jira-complete',
         \ ]
   " TODO: check if coc extensions are used:
+        " \ 'coc-tabnine',
         " \ 'coc-lists',
         " \ 'coc-project',
         " \ 'coc-highlight',
