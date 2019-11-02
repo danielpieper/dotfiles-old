@@ -654,7 +654,7 @@ if s:has_plugin('vim-airline')
 
   let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
   let g:airline#extensions#tabline#buffers_label = ''
-  let g:airline#extensions#tabline#fnamemod = ':t' " Show the filename
+  " let g:airline#extensions#tabline#fnamemod = ':t' " Show the filename
   let g:airline#extensions#tabline#fnamecollapse = 0
   let g:airline#extensions#tabline#show_tab_nr = 0
   let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -835,6 +835,7 @@ if s:has_plugin('ale')
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'php': ['php_cs_fixer'],
+        \ 'go': ['gofmt'],
         \ }
 
   nnoremap <Leader>ff :ALEFix<CR>
