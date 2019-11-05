@@ -824,7 +824,6 @@ if s:has_plugin('ale')
   let g:ale_disable_lsp = 1
   let g:ale_maximum_file_size = 80000 " 80kb?
   let g:ale_linters_explicit = 1
-  let g:ale_fix_on_save=0
   let g:ale_linters = {
         \ 'php': ['phpcs', 'phpmd'],
         \ 'go': ['gopls', 'gofmt', 'golint'],
@@ -837,6 +836,10 @@ if s:has_plugin('ale')
         \ 'php': ['php_cs_fixer'],
         \ 'go': ['gofmt'],
         \ }
+  let g:ale_fix_on_save=1
+  let g:ale_fix_on_save_ignore = {
+        \ 'php': ['php_cs_fixer'],
+        \}
 
   nnoremap <Leader>ff :ALEFix<CR>
 endif
