@@ -6,7 +6,7 @@
     Shift_L, Down, Button5, 4
     Control_L, Up,   Control_L|Button4
     Control_L, Down, Control_L|Button5
-    None, Left, Control_L|Shift_L|Tab
-    None, Right, Control_L|Tab
-    Shift_L, Left, Alt_L|Left
-    Shift_L, Right, Alt_R|Right
+    Shift_L, Left, Control_L|Shift_L|Tab
+    Shift_L, Right, Control_L|Tab
+    None, Left, Alt_L|Left
+    None, Right, Alt_R|Right
