@@ -660,11 +660,6 @@ if s:has_plugin('vim-airline')
   let g:airline#extensions#tabline#buffer_nr_show = 0
   let g:airline#extensions#tabline#show_close_button = 0
 
-  let g:airline_left_sep = "\uE0B4"
-  let g:airline_left_alt_sep = "\uE0B5"
-  let g:airline_right_sep = "\uE0B6"
-  let g:airline_right_alt_sep = "\uE0B7"
-
   let g:airline_powerline_fonts = 1
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -826,11 +821,12 @@ if s:has_plugin('ale')
   let g:ale_linters_explicit = 1
   let g:ale_linters = {
         \ 'php': ['phpcs', 'phpmd'],
-        \ 'go': ['gopls', 'gofmt', 'golint'],
+        \ 'go': ['gopls', 'gofmt', 'golint', 'golangci-lint'],
         \ 'sh': ['shell'],
         \ 'js': ['eslint'],
         \ 'jsx': ['eslint'],
         \}
+  let g:ale_go_golangci_lint_options = '--fast'
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'php': ['php_cs_fixer'],
