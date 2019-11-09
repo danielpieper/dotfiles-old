@@ -287,7 +287,8 @@ set ignorecase
 set smartcase
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Spell check
 set spelllang=en

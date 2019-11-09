@@ -52,3 +52,7 @@ X Resources file
 
 ## `/zsh`
 Configuration for [Zsh](https://www.zsh.org) and [Zim](https://github.com/zimfw/zimfw)
+
+## `tmux`
+install plugin manager:
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
