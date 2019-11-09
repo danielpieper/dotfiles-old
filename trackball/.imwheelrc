@@ -3,10 +3,8 @@
 "^chromium$"
     None, Up, Button4, 2                  # scroll
     None, Down, Button5, 2                # scroll
-    Shift_L, Up, Button4, 4               # shift + scroll = fast scroll
-    Shift_L, Down, Button5, 4             # shift + scroll = fast scroll
-    Control_L, Up,   Control_L|Button4    # ctrl + scroll = zoom
-    Control_L, Down, Control_L|Button5    # ctrl + scroll = zoom
+    Shift_L, Up,   Button6, 2             # shift + scroll = horizontal scroll
+    Shift_L, Down, Button7, 2             # shift + scroll = horizontal scroll
     Shift_L, Left, Control_L|Shift_L|Tab  # shift + top right = tab right
     Shift_L, Right, Control_L|Tab         # shift + top left = tab left
     None, Left, Alt_L|Left                # top left = browser back
