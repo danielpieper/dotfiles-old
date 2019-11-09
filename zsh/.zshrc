@@ -50,7 +50,6 @@ fi
 
 alias vi="nvim"
 alias vim="nvim"
-alias mux="tmuxinator"
 
 alias xmm="xmodmap ~/.Xmodmap"
 
@@ -75,6 +74,7 @@ then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.tmuxinator.zsh ] && source ~/.tmuxinator.zsh
 
 if [[ -x "$(command -v jenv)" ]]
 then
