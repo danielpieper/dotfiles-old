@@ -401,7 +401,7 @@ cnoreabbrev Qall qall
 " ------------------------------------------------------------------------------
 
 " Save file
-nnoremap <silent><leader><cr> :silent wa<cr>
+nnoremap <silent><cr> :silent wa<cr>
 
 " gf but in a vsplit
 " TODO: what does this do?
@@ -455,12 +455,6 @@ nnoremap <silent> <F2> :noh<cr>
 " after indenting or unindenting.
 vnoremap < <gv
 vnoremap > >gv
-
-" Press enter for newline without insert
-nnoremap <cr> o<esc>
-" but don't effect command line mode
-autocmd CmdwinEnter * nnoremap <CR> <CR>
-autocmd CmdwinLeave * nnoremap <cr> o<esc>
 
 " Allow sourcing of vimrc
 nnoremap <leader>y :source $MYVIMRC<cr>
