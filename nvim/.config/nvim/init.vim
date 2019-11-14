@@ -764,9 +764,6 @@ if s:has_plugin('coc.nvim')
   " Use <c-space> to trigger completion.
   inoremap <silent><expr> <c-space> coc#refresh()
 
-  let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-  let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
-
   " nmap <silent> <leader>p :Prettier<cr>
   " command! -nargs=0 Prettier :CocCommand prettier.formatFile
   " nmap <silent> <leader>uf :CocList snippets<cr>
