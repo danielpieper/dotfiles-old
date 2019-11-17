@@ -32,8 +32,8 @@ Plug 'https://github.com/haya14busa/incsearch.vim' " incrementally highlights AL
 
 " File management
 " ------------------------------------------------------------------------------
-Plug 'https://github.com/scrooloose/nerdtree' " The NERDTree is a file system explorer for the Vim editor.
-Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " A plugin of NERDTree showing git status flags.
+" Plug 'https://github.com/scrooloose/nerdtree' " The NERDTree is a file system explorer for the Vim editor.
+" Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " A plugin of NERDTree showing git status flags.
 Plug 'https://github.com/mbbill/undotree' " Undo visualise
 
 
@@ -711,6 +711,7 @@ if s:has_plugin('coc.nvim')
         \ 'coc-pairs',
         \ 'coc-tsserver',
         \ 'coc-jira-complete',
+        \ 'coc-explorer',
         \ ]
   " TODO: check if coc extensions are used:
         " \ 'coc-tabnine',
@@ -798,6 +799,9 @@ if s:has_plugin('coc.nvim')
       call CocAction('doHover')
     endif
   endfunction
+
+  " coc-explorer:
+  nnoremap <silent><f3> :CocCommand explorer<CR>
 endif
 
 if s:has_plugin('ale')
