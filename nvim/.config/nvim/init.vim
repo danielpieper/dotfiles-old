@@ -10,6 +10,7 @@ call plug#begin(g:plugin_path)
 " ------------------------------------------------------------------------------
 Plug 'https://github.com/joshdick/onedark.vim' " Atom OneDark
 Plug 'https://github.com/ryanoasis/vim-devicons' " look at beauty icons
+Plug 'https://github.com/psliwka/vim-smoothie' " Smooth scrolling for Vim done right🥤
 
 
 " tmux
@@ -469,6 +470,13 @@ endif
 
 "  Plugin config
 " ------------------------------------------------------------------------------
+
+if s:has_plugin('vim-smoothie')
+  let g:smoothie_use_default_mappings = v:false
+
+  nmap <C-d> <Plug>(SmoothieDownwards)
+  nmap <C-u> <Plug>(SmoothieUpwards)
+endif
 
 if s:has_plugin('vim-textobj-entire')
   let g:textobj_entire_no_default_key_mappings = 1
