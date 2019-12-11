@@ -6,22 +6,21 @@
   browser = chromium
 [color]
   ui = auto
-# BEGIN desktop
-#[user]
-#  email = daniel@daniel-pieper.com
-#	name = Daniel Pieper
-#  username = danielpieper
-# END desktop
 # BEGIN laptop
 #[user]
 #  email = daniel@daniel-pieper.com
-#	name = Daniel Pieper
+#  name = Daniel Pieper
 #  username = danielpieper
 # END laptop
 # BEGIN work
 #[user]
 #  email = daniel.pieper@personio.de
 #	name = Daniel Pieper
+#	signingkey = 1A0A4B2B
+#[gpg]
+#	program = /usr/local/bin/gpg
+#[commit]
+#	gpgsign = true
 # END work
 [push]
 	default = simple

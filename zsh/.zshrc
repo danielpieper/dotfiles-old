@@ -14,6 +14,7 @@ ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=UTF-8
+export GPG_TTY=`tty`
 
 export PATH=$PATH:~/.composer/vendor/bin:~/.local/bin:~/go/bin:~/.gem/ruby/2.6.0/bin
 # BEGIN work
