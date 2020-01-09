@@ -560,6 +560,7 @@ if s:has_plugin('vim-polyglot')
   let g:polyglot_disabled = ['markdown', 'scss']
   let g:vue_disable_pre_processors = 1
   let g:jsx_ext_required = 0
+  let g:csv_move_folds = 1
 endif
 
 if s:has_plugin('vim-closetag')
@@ -720,10 +721,10 @@ if s:has_plugin('coc.nvim')
         \ 'coc-tsserver',
         \ 'coc-jira-complete',
         \ 'coc-explorer',
+        \ 'coc-lists',
         \ ]
   " TODO: check if coc extensions are used:
         " \ 'coc-tabnine',
-        " \ 'coc-lists',
         " \ 'coc-project',
         " \ 'coc-highlight',
         " \ 'coc-yank',
@@ -764,6 +765,14 @@ if s:has_plugin('coc.nvim')
   " Resume latest coc list
   " nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
   " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+  " nnoremap <a-p> :Files<cr>
+  " nnoremap <c-p> :CocList --number-select --auto-preview files<cr>
+  " nnoremap <c-p> :GFiles<cr>
+  " nnoremap <c-t> :Lines<cr>
+  " nnoremap <c-space> :CocList --number-select buffers<cr>
+  " nnoremap <c-f> :Ag<space>
+  " nnoremap <silent> <BS> :CocList --number-select cmdhistory<cr>
 
   hi CocCodeLens guifg=#3a445e
 
